@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		0448D866266048E500FA8703 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448D865266048E500FA8703 /* AppDelegate.swift */; };
-		0448D868266048E500FA8703 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448D867266048E500FA8703 /* SceneDelegate.swift */; };
-		0448D86A266048E500FA8703 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448D869266048E500FA8703 /* ViewController.swift */; };
-		0448D86D266048E500FA8703 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0448D86B266048E500FA8703 /* Main.storyboard */; };
 		0448D86F266048E700FA8703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0448D86E266048E700FA8703 /* Assets.xcassets */; };
 		0448D872266048E700FA8703 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0448D870266048E700FA8703 /* LaunchScreen.storyboard */; };
+		0448D87D26604F1600FA8703 /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448D87C26604F1600FA8703 /* AppAssembly.swift */; };
+		0448D8812660503E00FA8703 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448D8802660503E00FA8703 /* SplashViewController.swift */; };
+		0448D8832660516900FA8703 /* BaseViper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448D8822660516900FA8703 /* BaseViper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0448D862266048E500FA8703 /* SpartanSports.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpartanSports.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0448D865266048E500FA8703 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0448D867266048E500FA8703 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0448D869266048E500FA8703 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0448D86C266048E500FA8703 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0448D86E266048E700FA8703 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0448D871266048E700FA8703 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0448D873266048E700FA8703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0448D87C26604F1600FA8703 /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
+		0448D8802660503E00FA8703 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		0448D8822660516900FA8703 /* BaseViper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,55 @@
 		0448D864266048E500FA8703 /* SpartanSports */ = {
 			isa = PBXGroup;
 			children = (
+				0448D87926604ED100FA8703 /* Base */,
+				0448D87E2660501A00FA8703 /* Modules */,
 				0448D865266048E500FA8703 /* AppDelegate.swift */,
-				0448D867266048E500FA8703 /* SceneDelegate.swift */,
-				0448D869266048E500FA8703 /* ViewController.swift */,
-				0448D86B266048E500FA8703 /* Main.storyboard */,
 				0448D86E266048E700FA8703 /* Assets.xcassets */,
 				0448D870266048E700FA8703 /* LaunchScreen.storyboard */,
 				0448D873266048E700FA8703 /* Info.plist */,
 			);
 			path = SpartanSports;
+			sourceTree = "<group>";
+		};
+		0448D87926604ED100FA8703 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0448D87B26604EF700FA8703 /* BaseVIPER */,
+				0448D87A26604EEF00FA8703 /* Core */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		0448D87A26604EEF00FA8703 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0448D87C26604F1600FA8703 /* AppAssembly.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		0448D87B26604EF700FA8703 /* BaseVIPER */ = {
+			isa = PBXGroup;
+			children = (
+				0448D8822660516900FA8703 /* BaseViper.swift */,
+			);
+			path = BaseVIPER;
+			sourceTree = "<group>";
+		};
+		0448D87E2660501A00FA8703 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				0448D87F2660502900FA8703 /* Splash */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		0448D87F2660502900FA8703 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				0448D8802660503E00FA8703 /* SplashViewController.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +166,6 @@
 			files = (
 				0448D872266048E700FA8703 /* LaunchScreen.storyboard in Resources */,
 				0448D86F266048E700FA8703 /* Assets.xcassets in Resources */,
-				0448D86D266048E500FA8703 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +176,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0448D86A266048E500FA8703 /* ViewController.swift in Sources */,
+				0448D8812660503E00FA8703 /* SplashViewController.swift in Sources */,
 				0448D866266048E500FA8703 /* AppDelegate.swift in Sources */,
-				0448D868266048E500FA8703 /* SceneDelegate.swift in Sources */,
+				0448D87D26604F1600FA8703 /* AppAssembly.swift in Sources */,
+				0448D8832660516900FA8703 /* BaseViper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0448D86B266048E500FA8703 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0448D86C266048E500FA8703 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0448D870266048E700FA8703 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
