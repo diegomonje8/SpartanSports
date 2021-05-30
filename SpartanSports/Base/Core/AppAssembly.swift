@@ -25,7 +25,7 @@ class AppAssembly : AppAssemblyProtocol {
     internal func createSlindingMenu(window: UIWindow, vc: UIViewController, menu: [MenuResponse]) {
         self.customUI()
         let frontViewController = vc
-        let rearViewController = vc
+        let rearViewController = MenuAssembly.viewController()
         let swrevealVC = SWRevealViewController(rearViewController: rearViewController, frontViewController: frontViewController)
         swrevealVC?.toggleAnimationType = SWRevealToggleAnimationType.easeOut
         swrevealVC?.toggleAnimationDuration = 0.3
