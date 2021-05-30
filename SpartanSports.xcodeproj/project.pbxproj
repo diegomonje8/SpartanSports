@@ -12,6 +12,7 @@
 		0448D872266048E700FA8703 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0448D870266048E700FA8703 /* LaunchScreen.storyboard */; };
 		0448D87D26604F1600FA8703 /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448D87C26604F1600FA8703 /* AppAssembly.swift */; };
 		0448D8832660516900FA8703 /* BaseViper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448D8822660516900FA8703 /* BaseViper.swift */; };
+		0483800126644A30008091B6 /* ExpandAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483800026644A30008091B6 /* ExpandAnimation.swift */; };
 		049FD8662663A4FF00C99EC5 /* ErrorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049FD8652663A4FF00C99EC5 /* ErrorUtils.swift */; };
 		049FD86A2663A6DE00C99EC5 /* RequestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049FD8692663A6DE00C99EC5 /* RequestUtils.swift */; };
 		049FD86C2663A8BE00C99EC5 /* ReuseIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049FD86B2663A8BE00C99EC5 /* ReuseIdentifiers.swift */; };
@@ -65,6 +66,7 @@
 		0448D873266048E700FA8703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0448D87C26604F1600FA8703 /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
 		0448D8822660516900FA8703 /* BaseViper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViper.swift; sourceTree = "<group>"; };
+		0483800026644A30008091B6 /* ExpandAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandAnimation.swift; sourceTree = "<group>"; };
 		049FD8652663A4FF00C99EC5 /* ErrorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorUtils.swift; sourceTree = "<group>"; };
 		049FD8692663A6DE00C99EC5 /* RequestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestUtils.swift; sourceTree = "<group>"; };
 		049FD86B2663A8BE00C99EC5 /* ReuseIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifiers.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				049FD8652663A4FF00C99EC5 /* ErrorUtils.swift */,
 				049FD8692663A6DE00C99EC5 /* RequestUtils.swift */,
 				049FD8842663BCDD00C99EC5 /* ResponseGeneric.swift */,
+				0483800026644A30008091B6 /* ExpandAnimation.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				049FD8A82664062C00C99EC5 /* TrainingTwoInteractorImpl.swift in Sources */,
 				049FD8B02664063600C99EC5 /* TrainingOnePresenterImpl.swift in Sources */,
 				049FD8852663BCDD00C99EC5 /* ResponseGeneric.swift in Sources */,
+				0483800126644A30008091B6 /* ExpandAnimation.swift in Sources */,
 				049FD8C22664066200C99EC5 /* MenuInteractorImpl.swift in Sources */,
 				049FD8832663B7CB00C99EC5 /* ResponseMenuModel.swift in Sources */,
 				049FD8812663B63F00C99EC5 /* SplashPresenterImpl.swift in Sources */,
