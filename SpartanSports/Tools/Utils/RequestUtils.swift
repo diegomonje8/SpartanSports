@@ -46,3 +46,14 @@ struct RequestDTO {
     }
 }
 
+class RequestHeaders {
+    
+    public typealias HTTPHeaders = [String: String]
+    
+    public static let defaultHTTPHeaders: HTTPHeaders = {
+        let BearerAuthentificaction = AuthHeroku.authHeroku
+        return ["Authorization" : BearerAuthentificaction]
+    }()
+    
+}
+

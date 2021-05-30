@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Apierror: Error, LocalizedError {
+enum ApiError: Error, LocalizedError {
     
     case unknown
     case apiError(reason: String)
