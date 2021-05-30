@@ -51,6 +51,10 @@
 		049FD8D0266407DE00C99EC5 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049FD8CF266407DE00C99EC5 /* ViewControllerExtension.swift */; };
 		049FD8D3266408F500C99EC5 /* TrainingOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049FD8D1266408F500C99EC5 /* TrainingOneViewController.swift */; };
 		049FD8D4266408F500C99EC5 /* TrainingOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049FD8D2266408F500C99EC5 /* TrainingOneViewController.xib */; };
+		049FD8D926641ACC00C99EC5 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049FD8D726641ACC00C99EC5 /* HeaderTableViewCell.swift */; };
+		049FD8DA26641ACC00C99EC5 /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049FD8D826641ACC00C99EC5 /* HeaderTableViewCell.xib */; };
+		049FD8DD2664218300C99EC5 /* BodyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049FD8DB2664218300C99EC5 /* BodyTableViewCell.swift */; };
+		049FD8DE2664218300C99EC5 /* BodyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049FD8DC2664218300C99EC5 /* BodyTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +106,10 @@
 		049FD8CF266407DE00C99EC5 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		049FD8D1266408F500C99EC5 /* TrainingOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingOneViewController.swift; sourceTree = "<group>"; };
 		049FD8D2266408F500C99EC5 /* TrainingOneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingOneViewController.xib; sourceTree = "<group>"; };
+		049FD8D726641ACC00C99EC5 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		049FD8D826641ACC00C99EC5 /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
+		049FD8DB2664218300C99EC5 /* BodyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyTableViewCell.swift; sourceTree = "<group>"; };
+		049FD8DC2664218300C99EC5 /* BodyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BodyTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,6 +318,7 @@
 		049FD897266405E900C99EC5 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				049FD8D626641A9A00C99EC5 /* Components */,
 				049FD8BD2664066200C99EC5 /* MenuAssembly.swift */,
 				049FD8B92664066100C99EC5 /* MenuInteractorImpl.swift */,
 				049FD8B82664066100C99EC5 /* MenuPresenterImpl.swift */,
@@ -319,6 +328,17 @@
 				049FD8C62664068E00C99EC5 /* MenuViewController.xib */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		049FD8D626641A9A00C99EC5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				049FD8D726641ACC00C99EC5 /* HeaderTableViewCell.swift */,
+				049FD8D826641ACC00C99EC5 /* HeaderTableViewCell.xib */,
+				049FD8DB2664218300C99EC5 /* BodyTableViewCell.swift */,
+				049FD8DC2664218300C99EC5 /* BodyTableViewCell.xib */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,6 +403,8 @@
 				049FD8732663B52A00C99EC5 /* SplashViewController.xib in Resources */,
 				049FD8C82664068E00C99EC5 /* MenuViewController.xib in Resources */,
 				049FD8CC266406D000C99EC5 /* TrainingTwoViewController.xib in Resources */,
+				049FD8DA26641ACC00C99EC5 /* HeaderTableViewCell.xib in Resources */,
+				049FD8DE2664218300C99EC5 /* BodyTableViewCell.xib in Resources */,
 				049FD8D4266408F500C99EC5 /* TrainingOneViewController.xib in Resources */,
 				049FD88D2663F70C00C99EC5 /* HomeTabBarController.xib in Resources */,
 				0448D86F266048E700FA8703 /* Assets.xcassets in Resources */,
@@ -398,11 +420,13 @@
 			files = (
 				049FD8662663A4FF00C99EC5 /* ErrorUtils.swift in Sources */,
 				049FD8D3266408F500C99EC5 /* TrainingOneViewController.swift in Sources */,
+				049FD8D926641ACC00C99EC5 /* HeaderTableViewCell.swift in Sources */,
 				049FD8A62664062C00C99EC5 /* TrainingTwoPresenterImpl.swift in Sources */,
 				049FD8782663B5C600C99EC5 /* SplashAssembly.swift in Sources */,
 				0448D866266048E500FA8703 /* AppDelegate.swift in Sources */,
 				049FD87A2663B5DC00C99EC5 /* SplashProvider.swift in Sources */,
 				049FD8B12664063600C99EC5 /* TrainingOneInteractorImpl.swift in Sources */,
+				049FD8DD2664218300C99EC5 /* BodyTableViewCell.swift in Sources */,
 				049FD8B32664063600C99EC5 /* TrainingOneProviderImpl.swift in Sources */,
 				049FD8A72664062C00C99EC5 /* TrainingTwoProviderImpl.swift in Sources */,
 				049FD8942663F95C00C99EC5 /* SWRevealViewController .m in Sources */,

@@ -7,17 +7,26 @@
 import Foundation
 
 protocol MenuPresenterProtocol {
-   
+    func getNumberOfRowsInSection() -> Int
+    func getInformationObject(indexPath: Int) -> Menu?
 }
 
 class MenuPresenterImpl: BasePresenter<MenuViewControllerProtocol, MenuRouterProtocol> {
     
     var interactor: MenuInteractorProtocol?
+    var dataMenu : [MenuResponse] = []
     
 }
 
 
 extension MenuPresenterImpl: MenuPresenterProtocol {
     
+    internal func getNumberOfRowsInSection() -> Int {
+        self.dataMenu.count
+    }
+    
+    internal func getInformationObject(indexPath: Int) -> Menu? {
+        self.dataMenu[indexPath].menu
+    }
   
 }
