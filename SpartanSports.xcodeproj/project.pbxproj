@@ -25,6 +25,10 @@
 		049FD8812663B63F00C99EC5 /* SplashPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049FD8802663B63F00C99EC5 /* SplashPresenterImpl.swift */; };
 		049FD8832663B7CB00C99EC5 /* ResponseMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049FD8822663B7CB00C99EC5 /* ResponseMenuModel.swift */; };
 		049FD8852663BCDD00C99EC5 /* ResponseGeneric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049FD8842663BCDD00C99EC5 /* ResponseGeneric.swift */; };
+		049FD88C2663F70C00C99EC5 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049FD88A2663F70C00C99EC5 /* HomeTabBarController.swift */; };
+		049FD88D2663F70C00C99EC5 /* HomeTabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049FD88B2663F70C00C99EC5 /* HomeTabBarController.xib */; };
+		049FD88F2663F73700C99EC5 /* HomeTabBarAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049FD88E2663F73700C99EC5 /* HomeTabBarAssembly.swift */; };
+		049FD8942663F95C00C99EC5 /* SWRevealViewController .m in Sources */ = {isa = PBXBuildFile; fileRef = 049FD8922663F95C00C99EC5 /* SWRevealViewController .m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,12 @@
 		049FD8802663B63F00C99EC5 /* SplashPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenterImpl.swift; sourceTree = "<group>"; };
 		049FD8822663B7CB00C99EC5 /* ResponseMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseMenuModel.swift; sourceTree = "<group>"; };
 		049FD8842663BCDD00C99EC5 /* ResponseGeneric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseGeneric.swift; sourceTree = "<group>"; };
+		049FD88A2663F70C00C99EC5 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
+		049FD88B2663F70C00C99EC5 /* HomeTabBarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabBarController.xib; sourceTree = "<group>"; };
+		049FD88E2663F73700C99EC5 /* HomeTabBarAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarAssembly.swift; sourceTree = "<group>"; };
+		049FD8912663F95B00C99EC5 /* SpartanSports-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpartanSports-Bridging-Header.h"; sourceTree = "<group>"; };
+		049FD8922663F95C00C99EC5 /* SWRevealViewController .m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SWRevealViewController .m"; sourceTree = "<group>"; };
+		049FD8932663F95C00C99EC5 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +130,7 @@
 		0448D87E2660501A00FA8703 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				049FD8862663F68A00C99EC5 /* Home */,
 				0448D87F2660502900FA8703 /* SplashView */,
 			);
 			path = Modules;
@@ -141,6 +152,7 @@
 		049FD8642663A4E600C99EC5 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				049FD8902663F93A00C99EC5 /* LateralMenu */,
 				049FD8682663A51500C99EC5 /* Helpers */,
 				049FD8672663A50900C99EC5 /* Utils */,
 			);
@@ -199,6 +211,26 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		049FD8862663F68A00C99EC5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				049FD88A2663F70C00C99EC5 /* HomeTabBarController.swift */,
+				049FD88B2663F70C00C99EC5 /* HomeTabBarController.xib */,
+				049FD88E2663F73700C99EC5 /* HomeTabBarAssembly.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		049FD8902663F93A00C99EC5 /* LateralMenu */ = {
+			isa = PBXGroup;
+			children = (
+				049FD8922663F95C00C99EC5 /* SWRevealViewController .m */,
+				049FD8932663F95C00C99EC5 /* SWRevealViewController.h */,
+				049FD8912663F95B00C99EC5 /* SpartanSports-Bridging-Header.h */,
+			);
+			path = LateralMenu;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -230,6 +262,7 @@
 				TargetAttributes = {
 					0448D861266048E500FA8703 = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -258,6 +291,7 @@
 			files = (
 				0448D872266048E700FA8703 /* LaunchScreen.storyboard in Resources */,
 				049FD8732663B52A00C99EC5 /* SplashViewController.xib in Resources */,
+				049FD88D2663F70C00C99EC5 /* HomeTabBarController.xib in Resources */,
 				0448D86F266048E700FA8703 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,7 +307,9 @@
 				049FD8782663B5C600C99EC5 /* SplashAssembly.swift in Sources */,
 				0448D866266048E500FA8703 /* AppDelegate.swift in Sources */,
 				049FD87A2663B5DC00C99EC5 /* SplashProvider.swift in Sources */,
+				049FD8942663F95C00C99EC5 /* SWRevealViewController .m in Sources */,
 				049FD86F2663AAFD00C99EC5 /* RequestManager.swift in Sources */,
+				049FD88F2663F73700C99EC5 /* HomeTabBarAssembly.swift in Sources */,
 				049FD86C2663A8BE00C99EC5 /* ReuseIdentifiers.swift in Sources */,
 				0448D87D26604F1600FA8703 /* AppAssembly.swift in Sources */,
 				0448D8832660516900FA8703 /* BaseViper.swift in Sources */,
@@ -283,6 +319,7 @@
 				049FD8812663B63F00C99EC5 /* SplashPresenterImpl.swift in Sources */,
 				049FD8722663B52A00C99EC5 /* SplashViewController.swift in Sources */,
 				049FD87C2663B5FD00C99EC5 /* SplashInteractorImpl.swift in Sources */,
+				049FD88C2663F70C00C99EC5 /* HomeTabBarController.swift in Sources */,
 				049FD87E2663B61600C99EC5 /* SplashRouterImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +459,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4MTP24X5DR;
 				INFOPLIST_FILE = SpartanSports/Info.plist;
@@ -431,6 +469,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = es.whiteox.SpartanSports;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SpartanSports/Tools/LateralMenu/SpartanSports-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -441,6 +481,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4MTP24X5DR;
 				INFOPLIST_FILE = SpartanSports/Info.plist;
@@ -450,6 +491,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = es.whiteox.SpartanSports;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SpartanSports/Tools/LateralMenu/SpartanSports-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

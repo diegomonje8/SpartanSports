@@ -31,7 +31,7 @@ class SplashViewController: BaseViewController<SplashPresenterProtocol>, ReuseId
         }
         viewAnimator.startAnimation()
         viewAnimator.addCompletion { _ in
-            print("Animation finish")
+            self.presenter?.showHomeTabBar()
         }
     }
     

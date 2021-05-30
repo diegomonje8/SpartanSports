@@ -9,6 +9,13 @@ import Foundation
 
 final public class SplashAssembly {
     
+        static func splashNavigationController() -> BaseNavigationController {
+    
+            let navigationConroller = BaseNavigationController(rootViewController: splashViewController())
+            return navigationConroller
+    
+        }
+    
     static func splashViewController() -> SplashViewController {
         let vc = SplashViewController(nibName: SplashViewController.defaultResuseIdentifierViewController, bundle: nil)
         vc.presenter = presenter(viewController: vc)

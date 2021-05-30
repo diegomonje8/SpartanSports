@@ -10,6 +10,7 @@ import Foundation
 
 protocol SplashPresenterProtocol {
     func fetchMenu()
+    func showHomeTabBar()
 }
 
 class SplashPresenterImpl : BasePresenterWithInteractor<SplashViewController, SplashRouterProtocol, SplashInteractorProtocol> {
@@ -19,6 +20,9 @@ class SplashPresenterImpl : BasePresenterWithInteractor<SplashViewController, Sp
 }
 
 extension SplashPresenterImpl : SplashPresenterProtocol {
+    func showHomeTabBar() {
+        self.router?.showHomeTabBar(dataMenu: viewModel)
+    }
     
     func fetchMenu() {
         self.interactor?.fetchMenu(completion: { [weak self] result in
