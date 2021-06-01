@@ -16,11 +16,8 @@ protocol SplashInteractorProtocol {
 
 class SplashInteractorImpl : BaseInteractor<SplashPresenterProtocol> {
     var provider : SplashProviderProtcol = SplashProviderImpl()
-}
-
-extension SplashInteractorImpl : SplashInteractorProtocol {
     
-    internal func fetchMenu(completion: @escaping SplashInteractorCompletion) {
+    internal func fetchMenuFtomProvider(completion: @escaping SplashInteractorCompletion) {
         self.provider.fetchMenu { [weak self] result in
             guard self != nil else { return }
             switch result {
@@ -28,6 +25,33 @@ extension SplashInteractorImpl : SplashInteractorProtocol {
             case .failure(let error): completion(.failure(error))
             }
         }
+    }
+    
+}
+
+extension SplashInteractorImpl : SplashInteractorProtocol {
+    
+    
+    internal func fetchMenu(completion: @escaping SplashInteractorCompletion) {
+        
+        CoreDataStack.shared.isFirstTime { isFirstTime in
+            if isFirstTime {
+                fetchMenuFtomProvider(completion: completion)
+            }
+            else {
+                CoreDataStack.shared.loadDataIfNeeded { isRefreshingRequired in
+                    if isRefreshingRequired {
+                        fetchMenuFtomProvider(completion: completion)
+                    } else {
+                        completion(.success(CoreDataStack.shared.getMenu()))
+                    }
+                }
+            }
+        }
+        
+        
+        
+        
     }
     
 }

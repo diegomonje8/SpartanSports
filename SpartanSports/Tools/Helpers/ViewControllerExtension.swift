@@ -15,7 +15,16 @@ extension UIViewController {
                                          target:revealViewController() ,
                                          action: #selector(SWRevealViewController.revealToggle(_:)))
         revealViewController()?.rightViewRevealWidth = 150
+        revealViewController()?.panGestureRecognizer()
         self.navigationItem.leftBarButtonItem = menuButton
     }
     
 }
+
+//func showIMageMenuWithName(imageMenu: Menu) -> UIImage {
+//    switch imageMenu.imagen {
+//    case "iconoAvatar": return #imageLiteral(resourceName: "avatar")
+//    case "musicAvatar": return #imageLiteral(resourceName: "musicAvatar")
+//    case "calendarioAvatar": return #imageLiteral(resourceName: "calendarioAvatar")
+//    }
+//}
