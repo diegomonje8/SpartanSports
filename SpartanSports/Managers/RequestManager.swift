@@ -10,13 +10,13 @@ import Combine
 
 protocol RequestManagerProtocol: AnyObject {
     
-    func requestGeneric<T: Decodable>(requestDTO: RequestDTO, entityClass: T.Type) -> AnyPublisher<T,ApiError>
+    func requestGeneric<T: Decodable>(requestDTO: RequestDTO, entityClass: T.Type) -> AnyPublisher<T,NetworkingError>
     
 }
 
 class RequestManager: RequestManagerProtocol {
     
-    internal func requestGeneric<T>(requestDTO: RequestDTO, entityClass: T.Type) -> AnyPublisher<T, ApiError> where T : Decodable {
+    internal func requestGeneric<T>(requestDTO: RequestDTO, entityClass: T.Type) -> AnyPublisher<T, NetworkingError> where T : Decodable {
         
         let endpoint = requestDTO.endpoint
         var urlRequest = URLRequest(url: URL(string: endpoint)!)
@@ -28,28 +28,24 @@ class RequestManager: RequestManagerProtocol {
         
         return URLSession.shared
             .dataTaskPublisher(for: urlRequest)
-            .mapError { (error) -> ApiError in
-                ApiError.unknown
+            .mapError { (error) -> NetworkingError in
+                NetworkingError(error: error)
             }
-            .flatMap { data, response -> AnyPublisher<T, ApiError> in
+            .flatMap { data, response -> AnyPublisher<T, NetworkingError> in
                 guard let httpResponse = response as? HTTPURLResponse else {
-                    return Fail(error: ApiError.unknown).eraseToAnyPublisher()
+                    return Fail(error: NetworkingError(status: .badRequest)).eraseToAnyPublisher()
                 }
                 if (200...299).contains(httpResponse.statusCode) {
                     return Just(data)
                         .decode(type: T.self, decoder: JSONDecoder())
                         .mapError { error in
-                            ApiError.unknown
+                            NetworkingError(status: .accepted)
                         }
                         .eraseToAnyPublisher()
                 }
-                else if (httpResponse.statusCode == 404) {
-                    let error = ApiError.apiError(reason: "URL Not found")
-                    return Fail(error: error).eraseToAnyPublisher()
-                }
                 else {
-                    let error = ApiError.unknown
-                    return Fail(error: error).eraseToAnyPublisher()
+                    let error = NetworkingError(errorCode: httpResponse.statusCode)
+                    return Fail(error: NetworkingError(error: error)).eraseToAnyPublisher()
                 }
             }
             .receive(on: DispatchQueue.main)

@@ -8,7 +8,7 @@
 import Foundation
 
 
-typealias SplashInteractorCompletion = (ResponseArray<MenuResponse, ApiError>) -> ()
+typealias SplashInteractorCompletion = (ResponseArray<MenuResponse, NetworkingError>) -> ()
 
 protocol SplashInteractorProtocol {
     func fetchMenu(completion: @escaping SplashInteractorCompletion)

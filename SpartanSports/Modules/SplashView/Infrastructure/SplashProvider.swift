@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-typealias SplashProviderCompletion = (Result<ResponseMenuModel,ApiError>) -> ()
+typealias SplashProviderCompletion = (Result<ResponseMenuModel,NetworkingError>) -> ()
 
 protocol SplashProviderProtcol {
     func fetchMenu(conpletionHandler: @escaping SplashProviderCompletion)

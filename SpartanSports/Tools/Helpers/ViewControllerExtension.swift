@@ -21,10 +21,12 @@ extension UIViewController {
     
 }
 
-//func showIMageMenuWithName(imageMenu: Menu) -> UIImage {
-//    switch imageMenu.imagen {
-//    case "iconoAvatar": return #imageLiteral(resourceName: "avatar")
-//    case "musicAvatar": return #imageLiteral(resourceName: "musicAvatar")
-//    case "calendarioAvatar": return #imageLiteral(resourceName: "calendarioAvatar")
-//    }
-//}
+func showIMageMenuWithName(imageMenu: Menu) -> UIImage {
+    switch imageMenu.imagen {
+    case "iconoAvatar": return #imageLiteral(resourceName: "avatar")
+    case "musicAvatar": return #imageLiteral(resourceName: "musicAvatar")
+    case "calendarioAvatar": return #imageLiteral(resourceName: "calendarioAvatar")
+    case "consejosAvatar": return #imageLiteral(resourceName: "consejosAvatar")
+    default: return #imageLiteral(resourceName: "nosotrosAvatar")
+    }
+}

@@ -20,7 +20,7 @@ class MenuProviderImpl: MenuProviderProtocol {
     ///
     var cancellable: Set<AnyCancellable> = []
     
-    internal func fetchMenu(completionHandler: @escaping (Result<ResponseConsejosModel, ApiError>) -> ()) {
+    internal func fetchMenu(completionHandler: @escaping (Result<ResponseConsejosModel, NetworkingError>) -> ()) {
         
         let request = RequestDTO(params: nil,
                                  method: .get,
