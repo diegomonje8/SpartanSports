@@ -19,8 +19,9 @@ class SplashViewController: BaseViewController<SplashPresenterProtocol>, ReuseId
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.presenter?.fetchMenu()
         self.expandAnimation = ExpandAnimation(image: imageSplash)
+        self.presenter?.fetchMenu()
+        
     }
 
 }

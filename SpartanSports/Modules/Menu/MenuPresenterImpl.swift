@@ -16,11 +16,6 @@ class MenuPresenterImpl: BasePresenter<MenuViewControllerProtocol, MenuRouterPro
     var interactor: MenuInteractorProtocol?
     var dataMenu : [MenuResponse] = []
     
-}
-
-
-extension MenuPresenterImpl: MenuPresenterProtocol {
-    
     internal func getNumberOfRowsInSection() -> Int {
         self.dataMenu.count
     }
@@ -28,5 +23,16 @@ extension MenuPresenterImpl: MenuPresenterProtocol {
     internal func getInformationObject(indexPath: Int) -> Menu? {
         self.dataMenu[indexPath].menu
     }
+    
+}
+
+
+extension MenuPresenterImpl: MenuPresenterProtocol {
+    func showWebSiteRouter() {
+        
+    }
+    
+    
+   
   
 }

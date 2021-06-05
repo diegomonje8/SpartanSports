@@ -1,4 +1,4 @@
-// MenuProvider.swift
+// ConsejosProvider.swift
 // Architecture VIPER
 //
 // This source file is open source project in iOS
@@ -7,26 +7,26 @@
 import Foundation
 import Combine
 
-protocol MenuProviderProtocol {
+protocol ConsejosProviderProtocol {
     
 }
 
-class MenuProviderImpl: MenuProviderProtocol {
+class ConsejosProviderImpl: ConsejosProviderProtocol {
 
     let provider: RequestManagerProtocol = RequestManager()
     
     ///
     ///Ejemplo de petición con Combine OJO no borrar
     ///
-    var cancellable: Set<AnyCancellable> = []
+    /*var cancellable: Set<AnyCancellable> = []
     
-    internal func fetchMenu(completionHandler: @escaping (Result<ResponseConsejosModel, ApiError>) -> ()) {
+    internal func fetchMenu(completionHandler: @escaping (Result<ResponseMenuModel, ApiError>) -> ()) {
         
         let request = RequestDTO(params: nil,
                                  method: .get,
-                                 endpoint: URLEndpoint.endpointMenu)
+                                 endpoint: URLEndpoint.baseUrl+URLEndpoint.endpointMenu)
         
-        self.provider.requestGeneric(requestDTO: request, entityClass: ResponseConsejosModel.self)
+        self.provider.requestGeneric(requestDto: request, entityClass: ResponseMenuModel.self)
             .sink { [weak self] (completion) in
                 guard self != nil else { return }
                 switch completion {
@@ -39,7 +39,7 @@ class MenuProviderImpl: MenuProviderProtocol {
             guard self != nil else { return }
             completionHandler(.success(responseMenuModel))
         }.store(in: &cancellable)
-    }
+    }*/
     
 }
 

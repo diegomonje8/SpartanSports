@@ -34,6 +34,7 @@ extension SplashPresenterImpl : SplashPresenterProtocol {
                     self?.viewModel = response
                     self?.viewController?.fetchhDataFromPresent()
                 }
+                else {print("No data in Menu")}
             case .failure(let error):
                 print ("Error \(error?.localizedDescription ?? "Error")")
             }

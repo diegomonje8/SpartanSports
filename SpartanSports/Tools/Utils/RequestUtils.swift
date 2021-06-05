@@ -15,8 +15,7 @@ enum HTTPMethods: String {
 
 struct URLEndpoint {
     
-    static let baseURL = "https://app-whiteoxsports-123456.herokuapp.com/"
-    
+    static let baseURL = "https://app-whiteoxsports-123456.herokuapp.com/"                                  
     static let endpointMenu = baseURL + "iCoMenuResponse"
     static let endpointConsejos = baseURL + "iCoResponseConsejos"
     

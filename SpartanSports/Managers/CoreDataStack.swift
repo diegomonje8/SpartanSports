@@ -15,6 +15,8 @@ class CoreDataStack {
     private let calender = Calendar.current
     let defaultFirstTime  = "firstTime"
     
+    private init() {}
+    
     func loadDataIfNeeded(completionHandler: (Bool) -> ()) {
         if isRefreshingRequired() {
             defaults.set(Date(), forKey: defaultsKey)
@@ -43,13 +45,19 @@ class CoreDataStack {
     private func isRefreshingRequired() -> Bool {
         
         guard let lastRefreshing  = defaults.object(forKey: defaultsKey) as? Date else { return true }
+       
+        if let dif2 = calender.dateComponents([.hour], from: lastRefreshing, to: Date()).hour {
+            let dif = 24 - Int(dif2)
+            print("--> TIME REMAING TO REFRESH: \(dif)")
+        }
+        
         if let diff = calender.dateComponents([.hour], from: lastRefreshing, to: Date()).hour, diff > 24 {
             return true
         }
         return false
     }
     
-    //Gestión de datos . BBSS
+    //Gestión de datos. BBDD
     func setMenu(data: [MenuResponse])  {
 
         do {
@@ -76,11 +84,38 @@ class CoreDataStack {
         
     }
     
+    func setConsejos(data: [ConsejosGenerale])  {
+
+        do {
+            UserDefaults.standard.set(try PropertyListEncoder().encode(data), forKey: CoreDataStack.Constants.consejos)
+        } catch let error {
+            print (error)
+        }
+    }
+    
+    func setMenu() -> [ConsejosGenerale]? {
+        var myData : [ConsejosGenerale] = []
+        if let data = UserDefaults.standard.value(forKey: CoreDataStack.Constants.consejos) as? Data {
+            do {
+                myData = try PropertyListDecoder().decode([ConsejosGenerale].self, from: data)
+            }
+            catch let error {
+                print(error)
+            }
+        }
+        else {
+            return nil
+        }
+        return myData
+        
+    }
+    
     
 }
 
 private extension CoreDataStack {
     struct Constants {
         static let menu = "menu"
+        static let consejos = "consejos"
     }
 }
