@@ -15,7 +15,7 @@ import UIKit
 
 class AlertDefaultViewController: UIViewController {
 
-    weak var delagate : AlertDefaultViewControllerDelegate?
+    weak var delegate : AlertDefaultViewControllerDelegate?
     var type: DefaultAlertType?
     var viewModel : DefaultAlertViewModel?
     
@@ -28,24 +28,26 @@ class AlertDefaultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        initUI()
     }
 
     @IBAction func closeButtonAction(_ sender: Any) {
         self.dismiss(animated: true) {
-            self.delagate?.defaultPrimaryButtonPressed?(type: self.type ?? .none)
+            self.delegate?.defaultSecondaryButtonPressed?(type: self.type ?? .none)
         }
     }
     
     @IBAction func primaryButtonAction(_ sender: Any) {
         self.dismiss(animated: true) {
-            self.delagate?.defaultSecondaryButtonPressed?(type: self.type ?? .none)
+            self.delegate?.defaultPrimaryButtonPressed?(type: self.type ?? .none)
         }
     }
     
     
     @IBAction func SecondaryButtonAction(_ sender: Any) {
-        self.dismiss(animated: true)
+        self.dismiss(animated: true) {
+            self.delegate?.defaultSecondaryButtonPressed?(type: self.type ?? .none)
+        }
     }
     
     private func initUI() {
@@ -56,7 +58,6 @@ class AlertDefaultViewController: UIViewController {
             self.primaryButton.setTitle(viewModel?.confirmationPrimaryButton, for: .normal)
             self.secondatyButton.setTitle(viewModel?.confirmationSecondaryButton, for: .normal)
             self.constraintButtonPrimaryToBottom.constant = 20
-            
         default:
             self.lblTitle.text = ""
             self.lblMessage.text = ""

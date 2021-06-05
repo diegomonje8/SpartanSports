@@ -19,14 +19,16 @@ class MenuRouterImpl: BaseRouter< MenuPresenterProtocol> {
 
 extension MenuRouterImpl: MenuRouterProtocol {
     func showWebSiteInRouter() {
-        
+        let vc = WebViewAssembly.viewController()
+        //vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
     
     func showDefaultAlert(delegate: AlertDefaultViewControllerDelegate, model: DefaultAlertViewModel) {
         let vc = AlertDefaultViewController()
-        vc.delagate = delegate
+        vc.delegate = delegate
         vc.viewModel = model
-        vc.modalPresentationStyle = .fullScreen
+        vc.modalPresentationStyle = .overFullScreen
         vc.modalTransitionStyle = .crossDissolve
         viewController?.present(vc, animated: true, completion: nil)
     }

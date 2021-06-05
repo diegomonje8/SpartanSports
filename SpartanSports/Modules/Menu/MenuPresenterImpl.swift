@@ -9,6 +9,7 @@ import Foundation
 protocol MenuPresenterProtocol {
     func getNumberOfRowsInSection() -> Int
     func getInformationObject(indexPath: Int) -> Menu?
+    func showWebSite()
 }
 
 class MenuPresenterImpl: BasePresenter<MenuViewControllerProtocol, MenuRouterProtocol> {
@@ -28,11 +29,18 @@ class MenuPresenterImpl: BasePresenter<MenuViewControllerProtocol, MenuRouterPro
 
 
 extension MenuPresenterImpl: MenuPresenterProtocol {
-    func showWebSiteRouter() {
-        
+    func showWebSite() {
+        self.router?.showDefaultAlert(delegate: self, model: DefaultAlertViewModel(type: .confirmationNavigation))
+    }
+}
+
+extension MenuPresenterImpl : AlertDefaultViewControllerDelegate {
+    func defaultPrimaryButtonPressed(type: DefaultAlertType) {
+        self.router?.showWebSiteInRouter()
     }
     
+    func defaultSecondaryButtonPressed(type: DefaultAlertType) {
+        print("Cancel")
+    }
     
-   
-  
 }

@@ -76,7 +76,26 @@ extension MenuViewController : UITableViewDelegate, UITableViewDataSource {
             }
             else {
                return UITableViewCell()
-                
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case 0:
+            print("Ni needd")
+        default:
+            switch indexPath.row {
+            case 0:
+                presenter?.showWebSite()
+            case 1:
+                print("Press Music Plater")
+            case 2:
+                print("Press Calendario")
+            case 3:
+                print("Press Consejos")
+            default:
+                print("Press Nosotros")
             }
         }
     }
