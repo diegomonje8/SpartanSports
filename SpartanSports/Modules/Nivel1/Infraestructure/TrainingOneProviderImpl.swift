@@ -8,25 +8,23 @@ import Foundation
 import Combine
 
 protocol TrainingOneProviderProtocol {
-    
+    func fetchOneTraining(completionHandler: @escaping (Result<EntrenamientosResponseModel, NetworkingError>) -> ())
 }
 
 class TrainingOneProviderImpl: TrainingOneProviderProtocol {
 
     let provider: RequestManagerProtocol = RequestManager()
     
-    ///
-    ///Ejemplo de petición con Combine OJO no borrar
-    ///
-    /*var cancellable: Set<AnyCancellable> = []
     
-    internal func fetchMenu(completionHandler: @escaping (Result<ResponseMenuModel, ApiError>) -> ()) {
+    var cancellable: Set<AnyCancellable> = []
+    
+    internal func fetchOneTraining(completionHandler: @escaping (Result<EntrenamientosResponseModel, NetworkingError>) -> ()) {
         
         let request = RequestDTO(params: nil,
                                  method: .get,
-                                 endpoint: URLEndpoint.baseUrl+URLEndpoint.endpointMenu)
+                                 endpoint: URLEndpoint.endpointNivel1)
         
-        self.provider.requestGeneric(requestDto: request, entityClass: ResponseMenuModel.self)
+        self.provider.requestGeneric(requestDTO: request, entityClass: EntrenamientosResponseModel.self)
             .sink { [weak self] (completion) in
                 guard self != nil else { return }
                 switch completion {
@@ -35,11 +33,11 @@ class TrainingOneProviderImpl: TrainingOneProviderProtocol {
                 case .failure(let error):
                     completionHandler(.failure(error))
                 }
-        } receiveValue: { [weak self] responseMenuModel in
+        } receiveValue: { [weak self] responseTrainingModel in
             guard self != nil else { return }
-            completionHandler(.success(responseMenuModel))
+            completionHandler(.success(responseTrainingModel))
         }.store(in: &cancellable)
-    }*/
+    }
     
 }
 

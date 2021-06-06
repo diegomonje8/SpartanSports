@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		036DC5A69110A8EEF0E36D65 /* Pods_SpartanSports.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F8836ABA76176017005914 /* Pods_SpartanSports.framework */; };
 		0448D866266048E500FA8703 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448D865266048E500FA8703 /* AppDelegate.swift */; };
 		0448D86F266048E700FA8703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0448D86E266048E700FA8703 /* Assets.xcassets */; };
 		0448D872266048E700FA8703 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0448D870266048E700FA8703 /* LaunchScreen.storyboard */; };
@@ -90,6 +91,8 @@
 		04D66CA2266D3F9A000AB290 /* DetalleConsejosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D66CA0266D3F9A000AB290 /* DetalleConsejosCell.swift */; };
 		04D66CA3266D3F9A000AB290 /* DetalleConsejosCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D66CA1266D3F9A000AB290 /* DetalleConsejosCell.xib */; };
 		04D66CA7266D45CF000AB290 /* EntrenamientosResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D66CA6266D45CF000AB290 /* EntrenamientosResponseModel.swift */; };
+		04DBC00D266D5B3900B82132 /* TrainingOneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DBC00B266D5B3900B82132 /* TrainingOneCell.swift */; };
+		04DBC00E266D5B3900B82132 /* TrainingOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DBC00C266D5B3900B82132 /* TrainingOneCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -182,6 +185,11 @@
 		04D66CA0266D3F9A000AB290 /* DetalleConsejosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleConsejosCell.swift; sourceTree = "<group>"; };
 		04D66CA1266D3F9A000AB290 /* DetalleConsejosCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetalleConsejosCell.xib; sourceTree = "<group>"; };
 		04D66CA6266D45CF000AB290 /* EntrenamientosResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntrenamientosResponseModel.swift; sourceTree = "<group>"; };
+		04DBC00B266D5B3900B82132 /* TrainingOneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingOneCell.swift; sourceTree = "<group>"; };
+		04DBC00C266D5B3900B82132 /* TrainingOneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingOneCell.xib; sourceTree = "<group>"; };
+		1B39AA7F44063C87029930A6 /* Pods-SpartanSports.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpartanSports.release.xcconfig"; path = "Target Support Files/Pods-SpartanSports/Pods-SpartanSports.release.xcconfig"; sourceTree = "<group>"; };
+		B5FF6A2565D0109721FEBF68 /* Pods-SpartanSports.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpartanSports.debug.xcconfig"; path = "Target Support Files/Pods-SpartanSports/Pods-SpartanSports.debug.xcconfig"; sourceTree = "<group>"; };
+		C9F8836ABA76176017005914 /* Pods_SpartanSports.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpartanSports.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +197,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				036DC5A69110A8EEF0E36D65 /* Pods_SpartanSports.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +209,8 @@
 			children = (
 				0448D864266048E500FA8703 /* SpartanSports */,
 				0448D863266048E500FA8703 /* Products */,
+				C5B90C02B3508F2DCC407BDF /* Pods */,
+				768F5E40F7EE85DE909FE3F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -434,11 +445,10 @@
 		049FD895266405CF00C99EC5 /* Nivel1 */ = {
 			isa = PBXGroup;
 			children = (
+				04DBC00A266D5B0C00B82132 /* Components */,
 				04D66CA4266D4586000AB290 /* Infraestructure */,
-				049FD8AC2664063500C99EC5 /* TrainingOneAssembly.swift */,
 				049FD8AE2664063500C99EC5 /* TrainingOneInteractorImpl.swift */,
 				049FD8AA2664063500C99EC5 /* TrainingOnePresenterImpl.swift */,
-				049FD8AB2664063500C99EC5 /* TrainingOneProviderImpl.swift */,
 				049FD8AD2664063500C99EC5 /* TrainingOneRouterImpl.swift */,
 				049FD8D1266408F500C99EC5 /* TrainingOneViewController.swift */,
 				049FD8D2266408F500C99EC5 /* TrainingOneViewController.xib */,
@@ -523,6 +533,8 @@
 		04D66CA4266D4586000AB290 /* Infraestructure */ = {
 			isa = PBXGroup;
 			children = (
+				049FD8AC2664063500C99EC5 /* TrainingOneAssembly.swift */,
+				049FD8AB2664063500C99EC5 /* TrainingOneProviderImpl.swift */,
 				04D66CA5266D45B1000AB290 /* Server Model */,
 			);
 			path = Infraestructure;
@@ -536,6 +548,32 @@
 			path = "Server Model";
 			sourceTree = "<group>";
 		};
+		04DBC00A266D5B0C00B82132 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				04DBC00B266D5B3900B82132 /* TrainingOneCell.swift */,
+				04DBC00C266D5B3900B82132 /* TrainingOneCell.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		768F5E40F7EE85DE909FE3F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9F8836ABA76176017005914 /* Pods_SpartanSports.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5B90C02B3508F2DCC407BDF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B5FF6A2565D0109721FEBF68 /* Pods-SpartanSports.debug.xcconfig */,
+				1B39AA7F44063C87029930A6 /* Pods-SpartanSports.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -543,9 +581,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0448D876266048E700FA8703 /* Build configuration list for PBXNativeTarget "SpartanSports" */;
 			buildPhases = (
+				813A848960AA9EC4EF3CDEFB /* [CP] Check Pods Manifest.lock */,
 				0448D85E266048E500FA8703 /* Sources */,
 				0448D85F266048E500FA8703 /* Frameworks */,
 				0448D860266048E500FA8703 /* Resources */,
+				707C060F0F795DE4A614C471 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -610,11 +650,54 @@
 				049FD8D4266408F500C99EC5 /* TrainingOneViewController.xib in Resources */,
 				049FD88D2663F70C00C99EC5 /* HomeTabBarController.xib in Resources */,
 				0495AFEF2666BCAE00AA41F7 /* ConsejosViewController.xib in Resources */,
+				04DBC00E266D5B3900B82132 /* TrainingOneCell.xib in Resources */,
 				0448D86F266048E700FA8703 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		707C060F0F795DE4A614C471 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpartanSports/Pods-SpartanSports-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpartanSports/Pods-SpartanSports-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpartanSports/Pods-SpartanSports-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		813A848960AA9EC4EF3CDEFB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpartanSports-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0448D85E266048E500FA8703 /* Sources */ = {
@@ -659,6 +742,7 @@
 				0495AFFF2666BD9A00AA41F7 /* WebViewViewController.swift in Sources */,
 				049FD8B02664063600C99EC5 /* TrainingOnePresenterImpl.swift in Sources */,
 				0495AFD42666A7C200AA41F7 /* AlertDefaultViewController.swift in Sources */,
+				04DBC00D266D5B3900B82132 /* TrainingOneCell.swift in Sources */,
 				049FD8852663BCDD00C99EC5 /* ResponseGeneric.swift in Sources */,
 				0495AFE92666BC7C00AA41F7 /* ConsejosPresenterImpl.swift in Sources */,
 				0483800126644A30008091B6 /* ExpandAnimation.swift in Sources */,
@@ -835,6 +919,7 @@
 		};
 		0448D877266048E700FA8703 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5FF6A2565D0109721FEBF68 /* Pods-SpartanSports.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -857,6 +942,7 @@
 		};
 		0448D878266048E700FA8703 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B39AA7F44063C87029930A6 /* Pods-SpartanSports.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

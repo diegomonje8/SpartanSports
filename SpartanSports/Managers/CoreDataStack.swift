@@ -16,11 +16,7 @@ class CoreDataStack {
     private let defaults = UserDefaults.standard
     private let defaultsKey = "lastReefresh"
     private let calender = Calendar.current
-    let defaultFirstTime  = "firstTime"
-    
     private init() {}
-    
-    
     
     func loadDataIfNeeded(completionHandler: (Bool) -> ()) {
         if isRefreshingRequired() {
@@ -31,22 +27,7 @@ class CoreDataStack {
         }
         
     }
-    
-//    func isFirstTime(completionHandler: (Bool) -> ()) {
-//        let aux = defaults.value(forKey: defaultFirstTime)
-//        if aux == nil {
-//            completionHandler(true)
-//            setupValueFirstTime()
-//        }
-//        else {
-//            completionHandler(false)
-//        }
-//    }
-    
-     func setupValueFirstTime() {
-        UserDefaults.standard.set(false, forKey: defaultFirstTime)
-    }
-    
+        
     private func isRefreshingRequired() -> Bool {
         
         guard let lastRefreshing  = defaults.object(forKey: defaultsKey) as? Date else { return true }
@@ -72,6 +53,10 @@ class CoreDataStack {
             if let data = data as? [ConsejosGenerale] {
                 saveData(data: data, key: CoreDataStack.Constants.consejos)
             }
+        case .nivel1:
+            if let data = data as? [ArrayDiccionariosNivel] {
+                saveData(data: data, key: CoreDataStack.Constants.nivel1)
+            }
         }
     }
     
@@ -89,6 +74,7 @@ class CoreDataStack {
         switch type {
         case is MenuResponse.Type: key = CoreDataStack.Constants.menu
         case is ConsejosGenerale.Type: key = CoreDataStack.Constants.consejos
+        case is ArrayDiccionariosNivel.Type: key = CoreDataStack.Constants.nivel1
         default: break
         }
         if let data = UserDefaults.standard.value(forKey: key) as? Data {
@@ -108,10 +94,12 @@ private extension CoreDataStack {
     struct Constants {
         static let menu = "menu"
         static let consejos = "consejos"
+        static let nivel1 = "trainingnivel1"
     }
 }
 
 enum CoreDataStackTypes : String {
     case menu = "menu"
     case consejos = "consejos"
+    case nivel1  = "trainingnivel1"
 }

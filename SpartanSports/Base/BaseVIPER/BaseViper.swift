@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import MBProgressHUD
 
 
 class BasePresenter<V, R> {
@@ -108,6 +109,14 @@ class BaseViewController<P> : UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func showLoading(view: UIView, animated: Bool) {
+        MBProgressHUD.showAdded(to: view, animated: animated)
+    }
+    
+    func hideLoading(view: UIView, animated: Bool) {
+        MBProgressHUD.hide(for: view, animated: animated)
     }
 
 }
