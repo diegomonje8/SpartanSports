@@ -18,4 +18,6 @@ class MenuInteractorImpl: BaseInteractor<MenuPresenterProtocol> {
 
 extension MenuInteractorImpl: MenuInteractorProtocol {
     
+    
+    
 }

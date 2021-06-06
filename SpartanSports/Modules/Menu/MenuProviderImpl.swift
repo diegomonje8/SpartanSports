@@ -7,20 +7,19 @@
 import Foundation
 import Combine
 
+typealias MenuProviderCompletion = (Result<ResponseConsejosModel,NetworkingError>) -> ()
+
 protocol MenuProviderProtocol {
-    
+    func fetchConsejos(completionHandler: @escaping MenuProviderCompletion)
 }
 
 class MenuProviderImpl: MenuProviderProtocol {
 
     let provider: RequestManagerProtocol = RequestManager()
     
-    ///
-    ///Ejemplo de petición con Combine OJO no borrar
-    ///
     var cancellable: Set<AnyCancellable> = []
     
-    internal func fetchMenu(completionHandler: @escaping (Result<ResponseConsejosModel, NetworkingError>) -> ()) {
+    internal func fetchConsejos(completionHandler: @escaping MenuProviderCompletion) {
         
         let request = RequestDTO(params: nil,
                                  method: .get,

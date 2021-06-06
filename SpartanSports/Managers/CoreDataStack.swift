@@ -7,6 +7,9 @@
 
 import Foundation
 
+
+
+
 class CoreDataStack {
     
     static let shared = CoreDataStack()
@@ -16,6 +19,8 @@ class CoreDataStack {
     let defaultFirstTime  = "firstTime"
     
     private init() {}
+    
+    
     
     func loadDataIfNeeded(completionHandler: (Bool) -> ()) {
         if isRefreshingRequired() {
@@ -57,60 +62,46 @@ class CoreDataStack {
         return false
     }
     
-    //Gestión de datos. BBDD
-    func setMenu(data: [MenuResponse])  {
-
+    func setData<T>(data: [T], type: CoreDataStackTypes) {
+        switch type {
+        case .menu:
+            if let data = data as? [MenuResponse] {
+                saveData(data: data, key: CoreDataStack.Constants.menu)
+            }
+        case .consejos:
+            if let data = data as? [ConsejosGenerale] {
+                saveData(data: data, key: CoreDataStack.Constants.menu)
+            }
+        }
+    }
+    
+    private func saveData<T: Encodable>(data: T, key: String) {
         do {
-            UserDefaults.standard.set(try PropertyListEncoder().encode(data), forKey: CoreDataStack.Constants.menu)
+            UserDefaults.standard.set(try PropertyListEncoder().encode(data), forKey: key)
         } catch let error {
             print (error)
         }
     }
     
-    func getMenu() -> [MenuResponse]? {
-        var myData : [MenuResponse] = []
-        if let data = UserDefaults.standard.value(forKey: CoreDataStack.Constants.menu) as? Data {
+    func getData<T: Decodable>(type: T.Type) -> [T] {
+        var key : String = ""
+        
+        switch type {
+        case is MenuResponse.Type: key = CoreDataStack.Constants.menu
+        case is ConsejosGenerale.Type: key = CoreDataStack.Constants.consejos
+        default: break
+        }
+        if let data = UserDefaults.standard.value(forKey: key) as? Data {
             do {
-                myData = try PropertyListDecoder().decode([MenuResponse].self, from: data)
+                return try PropertyListDecoder().decode([T].self, from: data)
             }
             catch let error {
                 print(error)
             }
         }
-        else {
-            return nil
-        }
-        return myData
-        
+       return []
     }
-    
-    func setConsejos(data: [ConsejosGenerale])  {
 
-        do {
-            UserDefaults.standard.set(try PropertyListEncoder().encode(data), forKey: CoreDataStack.Constants.consejos)
-        } catch let error {
-            print (error)
-        }
-    }
-    
-    func setMenu() -> [ConsejosGenerale]? {
-        var myData : [ConsejosGenerale] = []
-        if let data = UserDefaults.standard.value(forKey: CoreDataStack.Constants.consejos) as? Data {
-            do {
-                myData = try PropertyListDecoder().decode([ConsejosGenerale].self, from: data)
-            }
-            catch let error {
-                print(error)
-            }
-        }
-        else {
-            return nil
-        }
-        return myData
-        
-    }
-    
-    
 }
 
 private extension CoreDataStack {
@@ -118,4 +109,9 @@ private extension CoreDataStack {
         static let menu = "menu"
         static let consejos = "consejos"
     }
+}
+
+enum CoreDataStackTypes : String {
+    case menu = "menu"
+    case consejos = "consejos"
 }
