@@ -32,16 +32,16 @@ class CoreDataStack {
         
     }
     
-    func isFirstTime(completionHandler: (Bool) -> ()) {
-        let aux = defaults.value(forKey: defaultFirstTime)
-        if aux == nil {
-            completionHandler(true)
-            setupValueFirstTime()
-        }
-        else {
-            completionHandler(false)
-        }
-    }
+//    func isFirstTime(completionHandler: (Bool) -> ()) {
+//        let aux = defaults.value(forKey: defaultFirstTime)
+//        if aux == nil {
+//            completionHandler(true)
+//            setupValueFirstTime()
+//        }
+//        else {
+//            completionHandler(false)
+//        }
+//    }
     
      func setupValueFirstTime() {
         UserDefaults.standard.set(false, forKey: defaultFirstTime)
@@ -70,7 +70,7 @@ class CoreDataStack {
             }
         case .consejos:
             if let data = data as? [ConsejosGenerale] {
-                saveData(data: data, key: CoreDataStack.Constants.menu)
+                saveData(data: data, key: CoreDataStack.Constants.consejos)
             }
         }
     }

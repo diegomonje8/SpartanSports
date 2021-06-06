@@ -10,12 +10,15 @@ protocol MenuPresenterProtocol {
     func getNumberOfRowsInSection() -> Int
     func getInformationObject(indexPath: Int) -> Menu?
     func showWebSite()
+    func fecthConsejos()
+    func navigateToConsejos()
 }
 
 class MenuPresenterImpl: BasePresenter<MenuViewControllerProtocol, MenuRouterProtocol> {
     
     var interactor: MenuInteractorProtocol?
     var dataMenu : [MenuResponse] = []
+    var dataConsejos: [ConsejosGenerale] = []
     
     internal func getNumberOfRowsInSection() -> Int {
         self.dataMenu.count
@@ -29,6 +32,26 @@ class MenuPresenterImpl: BasePresenter<MenuViewControllerProtocol, MenuRouterPro
 
 
 extension MenuPresenterImpl: MenuPresenterProtocol {
+    func navigateToConsejos() {
+        router?.navigateToConsejosRouter(dataConsejos: dataConsejos)
+    }
+    
+    func fecthConsejos() {
+        self.interactor?.fecthConsejos(completion: { [weak self] result in
+            guard self != nil else { return }
+            switch result {
+            case .success(let response):
+                if let response = response {
+                    self?.dataConsejos.removeAll()
+                    self?.dataConsejos = response
+                }
+            case .failure(let error):
+                print(error?.localizedDescription ?? "Error fetching Consejos")
+            }
+            
+        })
+    }
+    
     func showWebSite() {
         self.router?.showDefaultAlert(delegate: self, model: DefaultAlertViewModel(type: .confirmationNavigation))
     }

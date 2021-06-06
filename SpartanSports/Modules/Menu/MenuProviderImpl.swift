@@ -23,7 +23,7 @@ class MenuProviderImpl: MenuProviderProtocol {
         
         let request = RequestDTO(params: nil,
                                  method: .get,
-                                 endpoint: URLEndpoint.endpointMenu)
+                                 endpoint: URLEndpoint.endpointConsejos)
         
         self.provider.requestGeneric(requestDTO: request, entityClass: ResponseConsejosModel.self)
             .sink { [weak self] (completion) in
@@ -34,9 +34,9 @@ class MenuProviderImpl: MenuProviderProtocol {
                 case .failure(let error):
                     completionHandler(.failure(error))
                 }
-        } receiveValue: { [weak self] responseMenuModel in
+        } receiveValue: { [weak self] responseConsejosModel in
             guard self != nil else { return }
-            completionHandler(.success(responseMenuModel))
+            completionHandler(.success(responseConsejosModel))
         }.store(in: &cancellable)
     }
     

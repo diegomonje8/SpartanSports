@@ -9,7 +9,7 @@ import Foundation
 protocol MenuRouterProtocol {
     func showWebSiteInRouter()
     func showDefaultAlert(delegate: AlertDefaultViewControllerDelegate, model: DefaultAlertViewModel)
-    
+    func navigateToConsejosRouter(dataConsejos: [ConsejosGenerale])
 }
 
 class MenuRouterImpl: BaseRouter< MenuPresenterProtocol> {
@@ -18,6 +18,8 @@ class MenuRouterImpl: BaseRouter< MenuPresenterProtocol> {
 }
 
 extension MenuRouterImpl: MenuRouterProtocol {
+   
+    
     func showWebSiteInRouter() {
         let vc = WebViewAssembly.viewController()
         //vc.modalPresentationStyle = .fullScreen
@@ -33,8 +35,10 @@ extension MenuRouterImpl: MenuRouterProtocol {
         viewController?.present(vc, animated: true, completion: nil)
     }
     
-    
-    
+    func navigateToConsejosRouter(dataConsejos: [ConsejosGenerale]) {
+        let vc = ConsejosAssembly.viewController(consejos: DataConsejosDTO.init(consejos: dataConsejos))
+        self.present(vc, animated: true, completion: nil)
+    }
     
     
 }

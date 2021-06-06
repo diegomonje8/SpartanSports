@@ -13,16 +13,17 @@ final public class ConsejosAssembly {
         return navigationController
     }
     
-    static func viewController() -> ConsejosViewController {
+    static func viewController(consejos: DataConsejosDTO? = nil) -> ConsejosViewController {
         let vc = ConsejosViewController(nibName: ConsejosViewController.defaultResuseIdentifierViewController, bundle: nil)
-        vc.presenter = presenter(viewController: vc)
+        vc.presenter = presenter(viewController: vc, data: consejos)
         return vc
     }
     
-    static func presenter(viewController: ConsejosViewController) -> ConsejosPresenterProtocol {
+    static func presenter(viewController: ConsejosViewController, data: DataConsejosDTO? = nil) -> ConsejosPresenterProtocol {
         let presenter = ConsejosPresenterImpl(viewController: viewController)
         presenter.router = router(viewController: viewController, presenter: presenter)
         presenter.interactor = interactor()
+        presenter.dataConsejos = data?.consejos ?? []
         return presenter
     }
     
@@ -38,3 +39,6 @@ final public class ConsejosAssembly {
     
 }
 
+struct DataConsejosDTO {
+    var consejos: [ConsejosGenerale]
+}

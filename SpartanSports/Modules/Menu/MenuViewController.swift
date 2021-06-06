@@ -19,6 +19,7 @@ class MenuViewController: BaseViewController<MenuPresenterProtocol>, ReuseIdenti
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.presenter?.fecthConsejos()
         self.setupTableView()
        
     }
@@ -93,7 +94,7 @@ extension MenuViewController : UITableViewDelegate, UITableViewDataSource {
             case 2:
                 print("Press Calendario")
             case 3:
-                print("Press Consejos")
+                presenter?.navigateToConsejos()
             default:
                 print("Press Nosotros")
             }

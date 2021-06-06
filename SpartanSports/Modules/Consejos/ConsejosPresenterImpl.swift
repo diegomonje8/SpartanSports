@@ -13,6 +13,7 @@ protocol ConsejosPresenterProtocol {
 class ConsejosPresenterImpl: BasePresenter<ConsejosViewControllerProtocol, ConsejosRouterProtocol> {
     
     var interactor: ConsejosInteractorProtocol?
+    var dataConsejos : [ConsejosGenerale] = []
     
 }
 

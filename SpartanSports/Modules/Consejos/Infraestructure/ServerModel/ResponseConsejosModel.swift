@@ -5,9 +5,19 @@
 //  Created by MAC on 1/6/21.
 //
 
+import Foundation
+
+// MARK: - ResponseConsejosModel
+struct ResponseConsejosModel: Codable {
+    let icoResponseConsejos: IcoResponseConsejos?
+
+    enum CodingKeys: String, CodingKey {
+        case icoResponseConsejos = "icoResponseConsejos"
+    }
+}
 
 // MARK: - IcoResponseConsejos
-struct ResponseConsejosModel: Codable {
+struct IcoResponseConsejos: Codable {
     let consejosGenerales: [ConsejosGenerale]?
 
     enum CodingKeys: String, CodingKey {
@@ -40,4 +50,3 @@ struct MessageArray: Codable {
         case developMessage = "developMessage"
     }
 }
-
