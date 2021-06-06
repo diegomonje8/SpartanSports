@@ -14,11 +14,17 @@ protocol TablePresenterProtocol : AnyObject {
     func object(_ tableType: TableType, indexPath: IndexPath) -> Any
     func didTapRow(_ tableType: TableType, indexPath: IndexPath)
     func heightForRowAt(_ tableType: TableType, heightForRowAt indexPath: IndexPath) -> CGFloat
+    func estimatedHeightForRowAt(_ tableType: TableType, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat
+    func willDisplay(_ tableType: TableType, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
 }
+
+
 
 extension TablePresenterProtocol {
     func didTapRow(_ tableType: TableType, indexPath: IndexPath) {}
     func heightForRowAt(_ tableType: TableType, heightForRowAt indexPath: IndexPath) -> CGFloat { return 44 }
+    func estimatedHeightForRowAt(_ tableType: TableType, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat { return UITableView.automaticDimension}
+    func willDisplay(_ tableType: TableType, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) { cell.layoutIfNeeded() }
 }
 
 protocol TablePresenterDelegate : AnyObject {

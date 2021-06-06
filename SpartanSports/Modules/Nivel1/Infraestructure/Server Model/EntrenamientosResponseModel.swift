@@ -51,3 +51,15 @@ struct ArrayDiccionariosNivel: Codable {
     }
 }
 
+struct TrainingModelHeader: Codable {
+    let tituloEjercicio: String?
+    let imagenEjercicio: String?
+}
+
+struct TrainingModelInfo: Codable {
+    let descripcionEjercicio: String?
+}
+
+struct TrainingModelVideo: Codable {
+    let arrayEjerciciosResponse: [String]?
+}

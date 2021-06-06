@@ -43,6 +43,7 @@ class TableViewManager: NSObject {
         tableView?.rowHeight = UITableView.automaticDimension
         
         
+        
     }
 }
 

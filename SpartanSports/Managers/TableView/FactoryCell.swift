@@ -18,6 +18,12 @@ class FactoryCell: NSObject {
         switch object {
         case let model as ConsejosGenerale:
             return ConsejosGeneralesDrawer.cell(model: model, tableView: tableView, presenter: presenter)
+        case let model as TrainingModelHeader:
+            return DetailTrainingTitleCellDrawer.cell(model: model, tableView: tableView, presenter: presenter)
+        case let model as TrainingModelInfo:
+            return DetailTrainingInfoCellDrawer.cell(model: model, tableView: tableView, presenter: presenter)
+        case let model as TrainingModelVideo:
+            return DetailTrainingVideoCellDrawer.cell(model: model, tableView: tableView, presenter: presenter)
         default:
             return UITableViewCell()
         }

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="200" id="KGk-i7-Jjw" customClass="DetailTrainingTitleCell" customModule="SpartanSports" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="323" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="323" height="200"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TSD-re-qOa">
+                        <rect key="frame" x="0.0" y="0.0" width="323" height="200"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="HZg-5H-J3D">
+                                <rect key="frame" x="0.0" y="0.0" width="323" height="200"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_overlay" translatesAutoresizingMaskIntoConstraints="NO" id="k9s-uH-0cb">
+                                <rect key="frame" x="0.0" y="0.0" width="323" height="200"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMQ-9b-FEi">
+                                <rect key="frame" x="8" y="165.5" width="307" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="k9s-uH-0cb" secondAttribute="trailing" id="0Ij-tp-hIw"/>
+                            <constraint firstItem="k9s-uH-0cb" firstAttribute="top" secondItem="TSD-re-qOa" secondAttribute="top" id="0f3-DK-VTG"/>
+                            <constraint firstItem="HZg-5H-J3D" firstAttribute="leading" secondItem="TSD-re-qOa" secondAttribute="leading" id="56S-No-riU"/>
+                            <constraint firstAttribute="trailing" secondItem="HZg-5H-J3D" secondAttribute="trailing" id="6Xd-pg-m9g"/>
+                            <constraint firstAttribute="trailing" secondItem="BMQ-9b-FEi" secondAttribute="trailing" constant="8" id="8v7-WR-4sZ"/>
+                            <constraint firstAttribute="trailing" secondItem="k9s-uH-0cb" secondAttribute="trailing" id="DVy-8y-Z0t"/>
+                            <constraint firstItem="BMQ-9b-FEi" firstAttribute="leading" secondItem="TSD-re-qOa" secondAttribute="leading" constant="8" id="Fv1-C5-dl4"/>
+                            <constraint firstItem="k9s-uH-0cb" firstAttribute="leading" secondItem="TSD-re-qOa" secondAttribute="leading" id="I2Q-5m-bO5"/>
+                            <constraint firstAttribute="bottom" secondItem="k9s-uH-0cb" secondAttribute="bottom" id="U74-f8-AkA"/>
+                            <constraint firstItem="k9s-uH-0cb" firstAttribute="top" secondItem="TSD-re-qOa" secondAttribute="top" id="WU7-OG-bfv"/>
+                            <constraint firstItem="HZg-5H-J3D" firstAttribute="top" secondItem="TSD-re-qOa" secondAttribute="top" id="ZcE-1m-TXw"/>
+                            <constraint firstAttribute="bottom" secondItem="k9s-uH-0cb" secondAttribute="bottom" id="dbw-16-oMp"/>
+                            <constraint firstAttribute="bottom" secondItem="BMQ-9b-FEi" secondAttribute="bottom" constant="8" id="gaa-m1-cNq"/>
+                            <constraint firstAttribute="bottom" secondItem="HZg-5H-J3D" secondAttribute="bottom" id="nh9-oS-61M"/>
+                            <constraint firstItem="k9s-uH-0cb" firstAttribute="leading" secondItem="TSD-re-qOa" secondAttribute="leading" id="vK2-s2-ui8"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="TSD-re-qOa" secondAttribute="bottom" id="3OP-lx-tdV"/>
+                    <constraint firstAttribute="trailing" secondItem="TSD-re-qOa" secondAttribute="trailing" id="P64-IE-aM0"/>
+                    <constraint firstItem="TSD-re-qOa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Tns-Nd-zZ7"/>
+                    <constraint firstItem="TSD-re-qOa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="vkF-Kj-MM6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="myImage" destination="HZg-5H-J3D" id="dzt-Sh-ym5"/>
+                <outlet property="myTitle" destination="BMQ-9b-FEi" id="avD-36-HZs"/>
+            </connections>
+            <point key="canvasLocation" x="132.60869565217394" y="182.8125"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="gradient_overlay" width="320" height="300"/>
+        <image name="placeholder" width="1280" height="800"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

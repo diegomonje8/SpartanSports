@@ -93,6 +93,17 @@
 		04D66CA7266D45CF000AB290 /* EntrenamientosResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D66CA6266D45CF000AB290 /* EntrenamientosResponseModel.swift */; };
 		04DBC00D266D5B3900B82132 /* TrainingOneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DBC00B266D5B3900B82132 /* TrainingOneCell.swift */; };
 		04DBC00E266D5B3900B82132 /* TrainingOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DBC00C266D5B3900B82132 /* TrainingOneCell.xib */; };
+		04DBC011266D6B9D00B82132 /* DetailTrainingOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DBC00F266D6B9D00B82132 /* DetailTrainingOneViewController.swift */; };
+		04DBC012266D6B9D00B82132 /* DetailTrainingOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DBC010266D6B9D00B82132 /* DetailTrainingOneViewController.xib */; };
+		04DBC015266D6CDB00B82132 /* DetailTrainingOnePresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DBC014266D6CDB00B82132 /* DetailTrainingOnePresenterImpl.swift */; };
+		04DBC017266D6CEE00B82132 /* DetailTrainingOneAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DBC016266D6CEE00B82132 /* DetailTrainingOneAssembly.swift */; };
+		04DBC01B266D787900B82132 /* DetailTrainingTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DBC019266D787900B82132 /* DetailTrainingTitleCell.swift */; };
+		04DBC01C266D787900B82132 /* DetailTrainingTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DBC01A266D787900B82132 /* DetailTrainingTitleCell.xib */; };
+		04DBC01E266D7CC900B82132 /* DetailTrainingCellsDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DBC01D266D7CC900B82132 /* DetailTrainingCellsDrawer.swift */; };
+		04DBC021266D826C00B82132 /* TrainingOneInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DBC01F266D826C00B82132 /* TrainingOneInfoCell.swift */; };
+		04DBC022266D826C00B82132 /* TrainingOneInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DBC020266D826C00B82132 /* TrainingOneInfoCell.xib */; };
+		04DBC025266D85AC00B82132 /* DetailTrainingVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DBC023266D85AC00B82132 /* DetailTrainingVideoCell.swift */; };
+		04DBC026266D85AC00B82132 /* DetailTrainingVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DBC024266D85AC00B82132 /* DetailTrainingVideoCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -187,6 +198,17 @@
 		04D66CA6266D45CF000AB290 /* EntrenamientosResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntrenamientosResponseModel.swift; sourceTree = "<group>"; };
 		04DBC00B266D5B3900B82132 /* TrainingOneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingOneCell.swift; sourceTree = "<group>"; };
 		04DBC00C266D5B3900B82132 /* TrainingOneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingOneCell.xib; sourceTree = "<group>"; };
+		04DBC00F266D6B9D00B82132 /* DetailTrainingOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTrainingOneViewController.swift; sourceTree = "<group>"; };
+		04DBC010266D6B9D00B82132 /* DetailTrainingOneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTrainingOneViewController.xib; sourceTree = "<group>"; };
+		04DBC014266D6CDB00B82132 /* DetailTrainingOnePresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTrainingOnePresenterImpl.swift; sourceTree = "<group>"; };
+		04DBC016266D6CEE00B82132 /* DetailTrainingOneAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTrainingOneAssembly.swift; sourceTree = "<group>"; };
+		04DBC019266D787900B82132 /* DetailTrainingTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTrainingTitleCell.swift; sourceTree = "<group>"; };
+		04DBC01A266D787900B82132 /* DetailTrainingTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTrainingTitleCell.xib; sourceTree = "<group>"; };
+		04DBC01D266D7CC900B82132 /* DetailTrainingCellsDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTrainingCellsDrawer.swift; sourceTree = "<group>"; };
+		04DBC01F266D826C00B82132 /* TrainingOneInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingOneInfoCell.swift; sourceTree = "<group>"; };
+		04DBC020266D826C00B82132 /* TrainingOneInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingOneInfoCell.xib; sourceTree = "<group>"; };
+		04DBC023266D85AC00B82132 /* DetailTrainingVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTrainingVideoCell.swift; sourceTree = "<group>"; };
+		04DBC024266D85AC00B82132 /* DetailTrainingVideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTrainingVideoCell.xib; sourceTree = "<group>"; };
 		1B39AA7F44063C87029930A6 /* Pods-SpartanSports.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpartanSports.release.xcconfig"; path = "Target Support Files/Pods-SpartanSports/Pods-SpartanSports.release.xcconfig"; sourceTree = "<group>"; };
 		B5FF6A2565D0109721FEBF68 /* Pods-SpartanSports.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpartanSports.debug.xcconfig"; path = "Target Support Files/Pods-SpartanSports/Pods-SpartanSports.debug.xcconfig"; sourceTree = "<group>"; };
 		C9F8836ABA76176017005914 /* Pods_SpartanSports.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpartanSports.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -445,6 +467,7 @@
 		049FD895266405CF00C99EC5 /* Nivel1 */ = {
 			isa = PBXGroup;
 			children = (
+				04DBC013266D6BE100B82132 /* Detail */,
 				04DBC00A266D5B0C00B82132 /* Components */,
 				04D66CA4266D4586000AB290 /* Infraestructure */,
 				049FD8AE2664063500C99EC5 /* TrainingOneInteractorImpl.swift */,
@@ -557,6 +580,32 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		04DBC013266D6BE100B82132 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				04DBC018266D782C00B82132 /* Cells */,
+				04DBC00F266D6B9D00B82132 /* DetailTrainingOneViewController.swift */,
+				04DBC010266D6B9D00B82132 /* DetailTrainingOneViewController.xib */,
+				04DBC014266D6CDB00B82132 /* DetailTrainingOnePresenterImpl.swift */,
+				04DBC016266D6CEE00B82132 /* DetailTrainingOneAssembly.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		04DBC018266D782C00B82132 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				04DBC019266D787900B82132 /* DetailTrainingTitleCell.swift */,
+				04DBC01A266D787900B82132 /* DetailTrainingTitleCell.xib */,
+				04DBC01D266D7CC900B82132 /* DetailTrainingCellsDrawer.swift */,
+				04DBC01F266D826C00B82132 /* TrainingOneInfoCell.swift */,
+				04DBC020266D826C00B82132 /* TrainingOneInfoCell.xib */,
+				04DBC023266D85AC00B82132 /* DetailTrainingVideoCell.swift */,
+				04DBC024266D85AC00B82132 /* DetailTrainingVideoCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		768F5E40F7EE85DE909FE3F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -635,6 +684,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DBC012266D6B9D00B82132 /* DetailTrainingOneViewController.xib in Resources */,
 				0448D872266048E700FA8703 /* LaunchScreen.storyboard in Resources */,
 				049FD8732663B52A00C99EC5 /* SplashViewController.xib in Resources */,
 				049FD8C82664068E00C99EC5 /* MenuViewController.xib in Resources */,
@@ -644,6 +694,7 @@
 				0495B0002666BD9A00AA41F7 /* WebViewViewController.xib in Resources */,
 				04D66CA3266D3F9A000AB290 /* DetalleConsejosCell.xib in Resources */,
 				0495AFD52666A7C200AA41F7 /* AlertDefaultViewController.xib in Resources */,
+				04DBC01C266D787900B82132 /* DetailTrainingTitleCell.xib in Resources */,
 				04790E342666A47000A62A20 /* Localizable.strings in Resources */,
 				049FD8DE2664218300C99EC5 /* BodyTableViewCell.xib in Resources */,
 				04D66C90266D1E50000AB290 /* ConsejosCell.xib in Resources */,
@@ -651,6 +702,8 @@
 				049FD88D2663F70C00C99EC5 /* HomeTabBarController.xib in Resources */,
 				0495AFEF2666BCAE00AA41F7 /* ConsejosViewController.xib in Resources */,
 				04DBC00E266D5B3900B82132 /* TrainingOneCell.xib in Resources */,
+				04DBC022266D826C00B82132 /* TrainingOneInfoCell.xib in Resources */,
+				04DBC026266D85AC00B82132 /* DetailTrainingVideoCell.xib in Resources */,
 				0448D86F266048E700FA8703 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -706,6 +759,7 @@
 			files = (
 				049FD8662663A4FF00C99EC5 /* ErrorUtils.swift in Sources */,
 				04D66C89266D098F000AB290 /* TablePresenterProtocol.swift in Sources */,
+				04DBC01E266D7CC900B82132 /* DetailTrainingCellsDrawer.swift in Sources */,
 				049FD8D3266408F500C99EC5 /* TrainingOneViewController.swift in Sources */,
 				049FD8D926641ACC00C99EC5 /* HeaderTableViewCell.swift in Sources */,
 				04D66C92266D1E8C000AB290 /* BaseTableViewCell.swift in Sources */,
@@ -731,6 +785,7 @@
 				0448D87D26604F1600FA8703 /* AppAssembly.swift in Sources */,
 				0448D8832660516900FA8703 /* BaseViper.swift in Sources */,
 				0495AFEE2666BCAE00AA41F7 /* ConsejosViewController.swift in Sources */,
+				04DBC017266D6CEE00B82132 /* DetailTrainingOneAssembly.swift in Sources */,
 				049FD8B42664063600C99EC5 /* TrainingOneRouterImpl.swift in Sources */,
 				04D66C94266D227E000AB290 /* ConsejosGeneralDrawer.swift in Sources */,
 				049FD8C32664066200C99EC5 /* MenuProviderImpl.swift in Sources */,
@@ -748,17 +803,21 @@
 				0483800126644A30008091B6 /* ExpandAnimation.swift in Sources */,
 				0495AFD72666AED600AA41F7 /* AlertDefaultViewModel.swift in Sources */,
 				0495AFFB2666BD6B00AA41F7 /* WebViewRouterImpl.swift in Sources */,
+				04DBC011266D6B9D00B82132 /* DetailTrainingOneViewController.swift in Sources */,
 				049FD8C22664066200C99EC5 /* MenuInteractorImpl.swift in Sources */,
 				0495AFE62666BC7C00AA41F7 /* ConsejosAssembly.swift in Sources */,
 				049FD8832663B7CB00C99EC5 /* ResponseMenuModel.swift in Sources */,
+				04DBC021266D826C00B82132 /* TrainingOneInfoCell.swift in Sources */,
 				049FD8812663B63F00C99EC5 /* SplashPresenterImpl.swift in Sources */,
 				049FD8C02664066200C99EC5 /* MenuRouterImpl.swift in Sources */,
 				049FD8722663B52A00C99EC5 /* SplashViewController.swift in Sources */,
+				04DBC025266D85AC00B82132 /* DetailTrainingVideoCell.swift in Sources */,
 				04D66C8B266D1B6C000AB290 /* FactoryCell.swift in Sources */,
 				04D66CA7266D45CF000AB290 /* EntrenamientosResponseModel.swift in Sources */,
 				04D66C98266D390D000AB290 /* DetalleConsejosViewController.swift in Sources */,
 				049FD8D0266407DE00C99EC5 /* ViewControllerExtension.swift in Sources */,
 				049FD87C2663B5FD00C99EC5 /* SplashInteractorImpl.swift in Sources */,
+				04DBC01B266D787900B82132 /* DetailTrainingTitleCell.swift in Sources */,
 				049FD88C2663F70C00C99EC5 /* HomeTabBarController.swift in Sources */,
 				049FD8A32664062C00C99EC5 /* TrainingTwoAssembly.swift in Sources */,
 				04D66C87266D0903000AB290 /* TableViewManager.swift in Sources */,
@@ -767,6 +826,7 @@
 				049FD8CB266406D000C99EC5 /* TrainingTwoViewController.swift in Sources */,
 				049FD8A52664062C00C99EC5 /* TrainingTwoRouterImpl.swift in Sources */,
 				049FD8C12664066200C99EC5 /* MenuAssembly.swift in Sources */,
+				04DBC015266D6CDB00B82132 /* DetailTrainingOnePresenterImpl.swift in Sources */,
 				0495AFFC2666BD6B00AA41F7 /* WebViewAssembly.swift in Sources */,
 				049FD8B52664063600C99EC5 /* TrainingOneAssembly.swift in Sources */,
 				0495AFCF2666A5A600AA41F7 /* LocalizeKeys.swift in Sources */,

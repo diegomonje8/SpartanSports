@@ -10,6 +10,7 @@ protocol TrainingOnePresenterProtocol {
     func fetchTraining()
     func getNumberOfRowsInSection() -> Int
     func getInformationObject(indexPath: Int) -> ArrayDiccionariosNivel
+    func showDetail(position: Int)
 }
 
 class TrainingOnePresenterImpl: BasePresenter<TrainingOneViewControllerProtocol, TrainingOneRouterProtocol> {
@@ -17,11 +18,16 @@ class TrainingOnePresenterImpl: BasePresenter<TrainingOneViewControllerProtocol,
     var interactor: TrainingOneInteractorProtocol?
     var viewModel: [ArrayDiccionariosNivel] = []
     
-    
 }
 
 
 extension TrainingOnePresenterImpl: TrainingOnePresenterProtocol {
+    internal func showDetail(position: Int) {
+        if position < viewModel.count {
+            self.router?.showDetail(model: viewModel[position])
+        }
+    }
+    
     internal func fetchTraining() {
         self.interactor?.fetchTraining(completion: { [weak self] result in
             guard self != nil else { return }

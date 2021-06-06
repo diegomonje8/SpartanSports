@@ -54,7 +54,10 @@ extension TrainingOneViewController : UITableViewDataSource, UITableViewDelegate
             cell.configCell(data: model)
         }
         return cell
-        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.presenter?.showDetail(position: indexPath.row)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
