@@ -83,6 +83,13 @@
 		04D66C90266D1E50000AB290 /* ConsejosCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D66C8E266D1E50000AB290 /* ConsejosCell.xib */; };
 		04D66C92266D1E8C000AB290 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D66C91266D1E8C000AB290 /* BaseTableViewCell.swift */; };
 		04D66C94266D227E000AB290 /* ConsejosGeneralDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D66C93266D227E000AB290 /* ConsejosGeneralDrawer.swift */; };
+		04D66C98266D390D000AB290 /* DetalleConsejosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D66C96266D390D000AB290 /* DetalleConsejosViewController.swift */; };
+		04D66C99266D390D000AB290 /* DetalleConsejosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D66C97266D390D000AB290 /* DetalleConsejosViewController.xib */; };
+		04D66C9B266D3926000AB290 /* DetalleConsejosAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D66C9A266D3926000AB290 /* DetalleConsejosAssembly.swift */; };
+		04D66C9D266D3937000AB290 /* DetalleConsejosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D66C9C266D3937000AB290 /* DetalleConsejosPresenter.swift */; };
+		04D66CA2266D3F9A000AB290 /* DetalleConsejosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D66CA0266D3F9A000AB290 /* DetalleConsejosCell.swift */; };
+		04D66CA3266D3F9A000AB290 /* DetalleConsejosCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D66CA1266D3F9A000AB290 /* DetalleConsejosCell.xib */; };
+		04D66CA7266D45CF000AB290 /* EntrenamientosResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D66CA6266D45CF000AB290 /* EntrenamientosResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -168,6 +175,13 @@
 		04D66C8E266D1E50000AB290 /* ConsejosCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsejosCell.xib; sourceTree = "<group>"; };
 		04D66C91266D1E8C000AB290 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		04D66C93266D227E000AB290 /* ConsejosGeneralDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsejosGeneralDrawer.swift; sourceTree = "<group>"; };
+		04D66C96266D390D000AB290 /* DetalleConsejosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleConsejosViewController.swift; sourceTree = "<group>"; };
+		04D66C97266D390D000AB290 /* DetalleConsejosViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetalleConsejosViewController.xib; sourceTree = "<group>"; };
+		04D66C9A266D3926000AB290 /* DetalleConsejosAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleConsejosAssembly.swift; sourceTree = "<group>"; };
+		04D66C9C266D3937000AB290 /* DetalleConsejosPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleConsejosPresenter.swift; sourceTree = "<group>"; };
+		04D66CA0266D3F9A000AB290 /* DetalleConsejosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleConsejosCell.swift; sourceTree = "<group>"; };
+		04D66CA1266D3F9A000AB290 /* DetalleConsejosCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetalleConsejosCell.xib; sourceTree = "<group>"; };
+		04D66CA6266D45CF000AB290 /* EntrenamientosResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntrenamientosResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +300,7 @@
 		0495AFD82666BBC600AA41F7 /* Consejos */ = {
 			isa = PBXGroup;
 			children = (
+				04D66C95266D38D4000AB290 /* Detalle */,
 				04D66C8C266D1E21000AB290 /* Components */,
 				0495AFD92666BBCF00AA41F7 /* Infraestructure */,
 				0495AFE12666BC7B00AA41F7 /* ConsejosPresenterImpl.swift */,
@@ -419,6 +434,7 @@
 		049FD895266405CF00C99EC5 /* Nivel1 */ = {
 			isa = PBXGroup;
 			children = (
+				04D66CA4266D4586000AB290 /* Infraestructure */,
 				049FD8AC2664063500C99EC5 /* TrainingOneAssembly.swift */,
 				049FD8AE2664063500C99EC5 /* TrainingOneInteractorImpl.swift */,
 				049FD8AA2664063500C99EC5 /* TrainingOnePresenterImpl.swift */,
@@ -491,6 +507,35 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		04D66C95266D38D4000AB290 /* Detalle */ = {
+			isa = PBXGroup;
+			children = (
+				04D66C96266D390D000AB290 /* DetalleConsejosViewController.swift */,
+				04D66C97266D390D000AB290 /* DetalleConsejosViewController.xib */,
+				04D66C9A266D3926000AB290 /* DetalleConsejosAssembly.swift */,
+				04D66C9C266D3937000AB290 /* DetalleConsejosPresenter.swift */,
+				04D66CA0266D3F9A000AB290 /* DetalleConsejosCell.swift */,
+				04D66CA1266D3F9A000AB290 /* DetalleConsejosCell.xib */,
+			);
+			path = Detalle;
+			sourceTree = "<group>";
+		};
+		04D66CA4266D4586000AB290 /* Infraestructure */ = {
+			isa = PBXGroup;
+			children = (
+				04D66CA5266D45B1000AB290 /* Server Model */,
+			);
+			path = Infraestructure;
+			sourceTree = "<group>";
+		};
+		04D66CA5266D45B1000AB290 /* Server Model */ = {
+			isa = PBXGroup;
+			children = (
+				04D66CA6266D45CF000AB290 /* EntrenamientosResponseModel.swift */,
+			);
+			path = "Server Model";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -553,9 +598,11 @@
 				0448D872266048E700FA8703 /* LaunchScreen.storyboard in Resources */,
 				049FD8732663B52A00C99EC5 /* SplashViewController.xib in Resources */,
 				049FD8C82664068E00C99EC5 /* MenuViewController.xib in Resources */,
+				04D66C99266D390D000AB290 /* DetalleConsejosViewController.xib in Resources */,
 				049FD8CC266406D000C99EC5 /* TrainingTwoViewController.xib in Resources */,
 				049FD8DA26641ACC00C99EC5 /* HeaderTableViewCell.xib in Resources */,
 				0495B0002666BD9A00AA41F7 /* WebViewViewController.xib in Resources */,
+				04D66CA3266D3F9A000AB290 /* DetalleConsejosCell.xib in Resources */,
 				0495AFD52666A7C200AA41F7 /* AlertDefaultViewController.xib in Resources */,
 				04790E342666A47000A62A20 /* Localizable.strings in Resources */,
 				049FD8DE2664218300C99EC5 /* BodyTableViewCell.xib in Resources */,
@@ -581,6 +628,7 @@
 				04D66C92266D1E8C000AB290 /* BaseTableViewCell.swift in Sources */,
 				049FD8A62664062C00C99EC5 /* TrainingTwoPresenterImpl.swift in Sources */,
 				049FD8782663B5C600C99EC5 /* SplashAssembly.swift in Sources */,
+				04D66CA2266D3F9A000AB290 /* DetalleConsejosCell.swift in Sources */,
 				0448D866266048E500FA8703 /* AppDelegate.swift in Sources */,
 				049FD87A2663B5DC00C99EC5 /* SplashProvider.swift in Sources */,
 				049FD8B12664063600C99EC5 /* TrainingOneInteractorImpl.swift in Sources */,
@@ -623,11 +671,14 @@
 				049FD8C02664066200C99EC5 /* MenuRouterImpl.swift in Sources */,
 				049FD8722663B52A00C99EC5 /* SplashViewController.swift in Sources */,
 				04D66C8B266D1B6C000AB290 /* FactoryCell.swift in Sources */,
+				04D66CA7266D45CF000AB290 /* EntrenamientosResponseModel.swift in Sources */,
+				04D66C98266D390D000AB290 /* DetalleConsejosViewController.swift in Sources */,
 				049FD8D0266407DE00C99EC5 /* ViewControllerExtension.swift in Sources */,
 				049FD87C2663B5FD00C99EC5 /* SplashInteractorImpl.swift in Sources */,
 				049FD88C2663F70C00C99EC5 /* HomeTabBarController.swift in Sources */,
 				049FD8A32664062C00C99EC5 /* TrainingTwoAssembly.swift in Sources */,
 				04D66C87266D0903000AB290 /* TableViewManager.swift in Sources */,
+				04D66C9B266D3926000AB290 /* DetalleConsejosAssembly.swift in Sources */,
 				049FD8C72664068E00C99EC5 /* MenuViewController.swift in Sources */,
 				049FD8CB266406D000C99EC5 /* TrainingTwoViewController.swift in Sources */,
 				049FD8A52664062C00C99EC5 /* TrainingTwoRouterImpl.swift in Sources */,
@@ -636,6 +687,7 @@
 				049FD8B52664063600C99EC5 /* TrainingOneAssembly.swift in Sources */,
 				0495AFCF2666A5A600AA41F7 /* LocalizeKeys.swift in Sources */,
 				049FD87E2663B61600C99EC5 /* SplashRouterImpl.swift in Sources */,
+				04D66C9D266D3937000AB290 /* DetalleConsejosPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

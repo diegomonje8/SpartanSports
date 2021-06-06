@@ -17,7 +17,8 @@ class ConsejosRouterImpl: BaseRouter< ConsejosPresenterProtocol> {
 
 extension ConsejosRouterImpl: ConsejosRouterProtocol {
     func showDetail(model: [MessageArray]?) {
-        //
+        let vc = DetalleConsejosAssembly.viewController(consejos: DetailConsejosDTO.init(consejos: model ?? []))
+        self.show(vc)
     }
    
     
