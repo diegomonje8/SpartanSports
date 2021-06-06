@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConsejosViewController" customModule="SpartanSports" customModuleProvider="target">
             <connections>
+                <outlet property="myTableViewConsejos" destination="pak-KY-wMc" id="fbb-T6-iSI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,24 +19,20 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONSEJOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nku-oW-WNk">
-                    <rect key="frame" x="162.5" y="442.5" width="89" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="21" id="8rz-C6-n8f"/>
-                        <constraint firstAttribute="width" constant="89" id="kXh-Fu-C6v"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pak-KY-wMc">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Nku-oW-WNk" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="QSN-sU-UQS"/>
-                <constraint firstItem="Nku-oW-WNk" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="kAk-KD-OKe"/>
+                <constraint firstAttribute="bottom" secondItem="pak-KY-wMc" secondAttribute="bottom" id="6G1-YP-EtV"/>
+                <constraint firstAttribute="trailing" secondItem="pak-KY-wMc" secondAttribute="trailing" id="bha-PQ-yJH"/>
+                <constraint firstItem="pak-KY-wMc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dTV-R6-oIW"/>
+                <constraint firstItem="pak-KY-wMc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="w1p-ex-4do"/>
             </constraints>
-            <point key="canvasLocation" x="132" y="101"/>
+            <point key="canvasLocation" x="131.8840579710145" y="100.44642857142857"/>
         </view>
     </objects>
     <resources>

@@ -36,7 +36,7 @@ extension MenuRouterImpl: MenuRouterProtocol {
     }
     
     func navigateToConsejosRouter(dataConsejos: [ConsejosGenerale]) {
-        let vc = ConsejosAssembly.viewController(consejos: DataConsejosDTO.init(consejos: dataConsejos))
+        let vc = ConsejosAssembly.navigationController(consejos: DataConsejosDTO.init(consejos: dataConsejos))
         self.present(vc, animated: true, completion: nil)
     }
     

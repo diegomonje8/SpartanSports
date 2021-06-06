@@ -30,3 +30,11 @@ func showIMageMenuWithName(imageMenu: Menu) -> UIImage {
     default: return #imageLiteral(resourceName: "nosotrosAvatar")
     }
 }
+
+func showIMageConsejosWithName(imageConsejo: ConsejosGenerale) -> UIImage {
+    switch imageConsejo.image {
+    case "icono_obstaculos": return #imageLiteral(resourceName: "workout_58")
+    case "icono_carrera": return #imageLiteral(resourceName: "workout_80")
+    default: return #imageLiteral(resourceName: "workout_12")
+    }
+}

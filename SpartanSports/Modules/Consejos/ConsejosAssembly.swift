@@ -8,8 +8,8 @@ import Foundation
 
 final public class ConsejosAssembly {
     
-    static func navigationController() -> BaseNavigationController {
-        let navigationController = BaseNavigationController(rootViewController: viewController())
+    static func navigationController(consejos: DataConsejosDTO? = nil) -> BaseNavigationController {
+        let navigationController = BaseNavigationController(rootViewController: viewController(consejos: consejos))
         return navigationController
     }
     
@@ -22,14 +22,8 @@ final public class ConsejosAssembly {
     static func presenter(viewController: ConsejosViewController, data: DataConsejosDTO? = nil) -> ConsejosPresenterProtocol {
         let presenter = ConsejosPresenterImpl(viewController: viewController)
         presenter.router = router(viewController: viewController, presenter: presenter)
-        presenter.interactor = interactor()
         presenter.dataConsejos = data?.consejos ?? []
         return presenter
-    }
-    
-    static func interactor() -> ConsejosInteractorProtocol {
-        let interactor = ConsejosInteractorImpl()
-        return interactor
     }
     
     static func router(viewController: ConsejosViewController, presenter: ConsejosPresenterProtocol) -> ConsejosRouterProtocol {

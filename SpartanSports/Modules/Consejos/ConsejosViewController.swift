@@ -14,10 +14,14 @@ protocol ConsejosViewControllerProtocol {
 
 class ConsejosViewController: BaseViewController<ConsejosPresenterProtocol>, ReuseIdentifierInterfaceViewController {
     
+    @IBOutlet weak var myTableViewConsejos: UITableView!
+    var tableviewManager : TableViewManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        self.presenter?.getData()
+        tableviewManager = TableViewManager(tableView: myTableViewConsejos, presenter: presenter)
+        
     }
     
 }

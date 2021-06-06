@@ -7,7 +7,7 @@
 import Foundation
 
 protocol ConsejosRouterProtocol {
-    
+    func showDetail(model : [MessageArray]?)
 }
 
 class ConsejosRouterImpl: BaseRouter< ConsejosPresenterProtocol> {
@@ -16,6 +16,10 @@ class ConsejosRouterImpl: BaseRouter< ConsejosPresenterProtocol> {
 }
 
 extension ConsejosRouterImpl: ConsejosRouterProtocol {
+    func showDetail(model: [MessageArray]?) {
+        //
+    }
+   
     
     
 }
