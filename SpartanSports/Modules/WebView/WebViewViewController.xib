@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WebViewViewController" customModule="SpartanSports" customModuleProvider="target">
             <connections>
+                <outlet property="myActivityIndicator" destination="ZE4-Va-uFx" id="9IJ-BU-7Jj"/>
+                <outlet property="myWebView" destination="Ecz-R7-Xyb" id="LKE-5H-XKt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,22 +20,22 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HELLO WEBSITE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fos-UG-qNQ">
-                    <rect key="frame" x="106" y="442.5" width="202" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="21" id="LBX-ew-jez"/>
-                        <constraint firstAttribute="width" constant="202" id="l8Y-Rl-zVQ"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ecz-R7-Xyb">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ZE4-Va-uFx">
+                    <rect key="frame" x="197" y="438" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fos-UG-qNQ" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="ONy-aT-6y6"/>
-                <constraint firstItem="fos-UG-qNQ" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="wVf-vp-oct"/>
+                <constraint firstItem="Ecz-R7-Xyb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="B96-cc-fO5"/>
+                <constraint firstItem="Ecz-R7-Xyb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="BBx-3H-lqw"/>
+                <constraint firstItem="Ecz-R7-Xyb" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="POh-fl-b4Z"/>
+                <constraint firstAttribute="bottom" secondItem="Ecz-R7-Xyb" secondAttribute="bottom" id="eFd-yJ-sD9"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="130.58035714285714"/>
         </view>
