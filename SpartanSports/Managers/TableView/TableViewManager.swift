@@ -13,6 +13,7 @@ enum TableType {
 }
 
 class TableViewManager: NSObject {
+   
     weak var tableView: UITableView?
     weak var presenter: TablePresenterProtocol?
     var tableType = TableType.unspecified
@@ -49,15 +50,20 @@ class TableViewManager: NSObject {
 
 extension TableViewManager : UITableViewDelegate, UITableViewDataSource {
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         self.presenter?.numberOfCell(tableType, section: section) ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return FactoryCell.cell(for: self.presenter?.object(tableType, indexPath: indexPath),
-            tableView: tableView,
-            presenter: self.presenter
-        )
+    
+        let cell = FactoryCell.cell(for: self.presenter?.object(tableType, indexPath: indexPath),
+                                    tableView: tableView,
+                                    presenter: self.presenter
+                                )
+        self.presenter?.cell(tableType, cell: cell)
+        return cell
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

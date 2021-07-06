@@ -12,8 +12,7 @@ class ConsejosGeneralesDrawer {
     
     static func cell(model: ConsejosGenerale, tableView: UITableView, presenter: Any?) -> UITableViewCell {
         
-        guard let cell = BaseTableViewCell<Any>.createBaseCell(tableView: tableView, cell: ConsejosCell.self, cellName: ConsejosCell.defaultResuseIdentifier, model: model) else { return UITableViewCell()}
-        
+        guard let cell = BaseTableViewCell<Any>.createBaseCell(tableView: tableView, cell: ConsejosCell.self, cellName: ConsejosCell.defaultResuseIdentifier, model: model) else { return UITableViewCell() }
         return cell
         
     }

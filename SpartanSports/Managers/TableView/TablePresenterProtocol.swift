@@ -16,8 +16,8 @@ protocol TablePresenterProtocol : AnyObject {
     func heightForRowAt(_ tableType: TableType, heightForRowAt indexPath: IndexPath) -> CGFloat
     func estimatedHeightForRowAt(_ tableType: TableType, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat
     func willDisplay(_ tableType: TableType, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
+    func cell(_ tableType: TableType, cell: Any)
 }
-
 
 
 extension TablePresenterProtocol {
@@ -25,6 +25,7 @@ extension TablePresenterProtocol {
     func heightForRowAt(_ tableType: TableType, heightForRowAt indexPath: IndexPath) -> CGFloat { return 44 }
     func estimatedHeightForRowAt(_ tableType: TableType, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat { return UITableView.automaticDimension}
     func willDisplay(_ tableType: TableType, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) { cell.layoutIfNeeded() }
+    func cell(_ tableType: TableType, cell: Any)  {}
 }
 
 protocol TablePresenterDelegate : AnyObject {

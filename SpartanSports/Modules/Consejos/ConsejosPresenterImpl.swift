@@ -31,6 +31,12 @@ extension ConsejosPresenterImpl: ConsejosPresenterProtocol {
 
 extension ConsejosPresenterImpl : TablePresenterProtocol {
     
+    func cell(_ tableType: TableType, cell: Any) {
+        if let mycell = cell as? ConsejosCell {
+            mycell.delegate = self
+        }
+    }
+    
     func numberOfCell(_ tableType: TableType, section: Int) -> Int {
         return dataConsejos.count
     }
@@ -46,4 +52,12 @@ extension ConsejosPresenterImpl : TablePresenterProtocol {
     func didTapRow(_ tableType: TableType, indexPath: IndexPath) {
         self.router?.showDetail(model: self.dataConsejos[indexPath.row].messageArray)
     }
+}
+
+extension ConsejosPresenterImpl: ConsejosCellDelegate {
+    func confirmTapped() {
+        print("TAPPED DE VERDAD")
+    }
+    
+    
 }

@@ -29,11 +29,25 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxB-Rm-TPK">
+                        <rect key="frame" x="266" y="5" width="43" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="43" id="CoQ-HG-tJc"/>
+                            <constraint firstAttribute="height" constant="30" id="tlA-OX-5RZ"/>
+                        </constraints>
+                        <state key="normal" title="CLICK"/>
+                        <connections>
+                            <action selector="clickTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="JXP-x8-OJU"/>
+                            <action selector="clickTapped:" destination="-1" eventType="touchUpInside" id="QHV-d7-r2A"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="UyF-qQ-UVo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="6Ya-e3-Ofg"/>
+                    <constraint firstItem="bxB-Rm-TPK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="TT7-kJ-3s3"/>
                     <constraint firstAttribute="bottom" secondItem="tnq-TJ-Snk" secondAttribute="bottom" constant="5" id="TvU-J5-Lah"/>
                     <constraint firstItem="tnq-TJ-Snk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="Vdk-Zu-fXg"/>
+                    <constraint firstAttribute="trailing" secondItem="bxB-Rm-TPK" secondAttribute="trailing" constant="21" id="ZJZ-7V-sSI"/>
                     <constraint firstAttribute="trailing" secondItem="UyF-qQ-UVo" secondAttribute="trailing" constant="5" id="fwg-ul-NJE"/>
                     <constraint firstItem="UyF-qQ-UVo" firstAttribute="leading" secondItem="tnq-TJ-Snk" secondAttribute="trailing" constant="8" symbolic="YES" id="g99-eh-Rc0"/>
                     <constraint firstItem="tnq-TJ-Snk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="r52-p2-bvP"/>

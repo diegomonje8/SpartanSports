@@ -41,6 +41,7 @@ extension BaseTableViewCell {
             cell = tableView.dequeueReusableCell(withIdentifier: cellName) as? CellClass
         }
         cell?.configure(cellModel: model)
+        
         return cell
     }
     
